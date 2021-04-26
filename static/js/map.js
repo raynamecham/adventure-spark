@@ -1,15 +1,14 @@
 "use strict";
 
 function initMap() {
-  const map = new google.maps.Map(document.getElementById("map"), {
-    center: {
-      lat: 47,
-      lng: 122
-    },
-    scrollwheel: true,
-    zoom: 2,
+  new google.maps.Map(document.getElementById("map"), {
+    mapId: "7c96088359f57898",
+    center: { lat: 51.507351, lng: -0.127758 },
+    zoom: 5,
+    scrollwheel: false,
+    zoom: 5,
     zoomControl: true,
-    panControl: true,
+    panControl: false,
     streetViewControl: false
   });
 
