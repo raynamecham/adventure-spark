@@ -1,11 +1,11 @@
 "use strict";
 
 function initMap() {
-  new google.maps.Map(document.getElementById("map"), {
+  const map = new google.maps.Map(document.getElementById("map"), {
     mapId: "7c96088359f57898",
     center: { lat: 51.507351, lng: -0.127758 },
     zoom: 5,
-    scrollwheel: false,
+    scrollwheel: true,
     zoom: 5,
     zoomControl: true,
     panControl: false,
@@ -34,8 +34,8 @@ function initMap() {
 
     const locationMarker = new google.maps.Marker({
       position: {
-        lat: location.lat,
-        lng: location.long
+        lat: location.latitude,
+        lng: location.longitude
       },
       title: `Location: ${location.locationID}`,
       icon: {

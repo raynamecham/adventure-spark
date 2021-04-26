@@ -35,25 +35,25 @@ class Location(db.Model):
     def __repr__(self):
         return f'<Location location_id={self.location_id} location_name={self.location_name} lat={self.lat} long={self.long}>'
 
-# class Video(db.Model):
-#     """A video"""
+class Video(db.Model):
+    """A video"""
 
-#     __tablename__ = 'videos'
+    __tablename__ = 'videos'
 
-#     video_id = db.Column(db.Integer,
-#                         autoincrement=True,
-#                         primary_key=True)
-#     title = db.Column(db.String, nullable=False)
-#     url = db.Column(db.String, nullable=False)
-#     desc = db.Column(db.String)
-#     search_key = db.Column(db.String, db.ForeignKey('locations.search_key'), nullable=False)
-#     user_id = db.Column(db.Integer, db.ForeignKey('users.user_id'))
+    video_id = db.Column(db.Integer,
+                        autoincrement=True,
+                        primary_key=True)
+    title = db.Column(db.String, nullable=False)
+    url = db.Column(db.String, nullable=False)
+    desc = db.Column(db.String)
+    search_key = db.Column(db.String, db.ForeignKey('locations.search_key'))
+    user_id = db.Column(db.Integer, db.ForeignKey('users.user_id'))
 
-#     location = db.relationship('Location', backref='videos')
-#     user = db.relationship('User', backref='videos')
+    location = db.relationship('Location', backref='videos')
+    user = db.relationship('User', backref='videos')
 
-#     def __repr__(self):
-#         return f'<Video video_id={self.video_id} title={self.title}> '
+    def __repr__(self):
+        return f'<Video video_id={self.video_id} title={self.title}> '
 
 def connect_to_db(app):
     """Connect the database to Flask app."""
