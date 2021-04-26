@@ -1,29 +1,30 @@
-"""Load location data into database."""
+"""Script to seed database."""
 
-from model import Location, connect_to_db, db
-from server import app
+import os
+import json
+from random import choice
 
-#---------------------------------------------------------------------#
+import crud
+import model
+import server
 
-def get_locations():
-    """Load locations from dataset into database."""
+os.system('dropdb locations')
+os.system('createdb locations')
 
-    with open("data/locations.json") as location_data:
-        for i, row in enumerate(location_data):
-            if i >= 50:
-                break
+model.connect_to_db(server.app)
+model.db.create_all()
 
-            db.session.add(Location(*row.rstrip().split(",")))
+with open('data/locations.json') as f:
+    location_data = json.loads(f.read())
 
-            if i % 10 == 0:
-                print("{i} locations have been added to the database".format(i=i))
 
-    db.session.commit()
+locations_in_db = []
+for location in location_data:
+    location_name, lat, long, desc, search_key = (location['location_name'],
+                                                location['lat'],
+                                                location['long'],
+                                                location['desc'],
+                                                location['search_key'])
 
-#---------------------------------------------------------------------#
-
-if __name__ == '__main__':
-    connect_to_db(app)
-    db.create_all()
-
-    get_locations()
+    db_location = crud.create_location(location_name, lat, long, desc, search_key)
+    locations_in_db.append(db_location)
