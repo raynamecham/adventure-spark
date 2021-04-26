@@ -24,16 +24,14 @@ class Map(db.Model):
     location_id = db.Column(db.Integer,
                         autoincrement=True,
                         primary_key=True)
-    name = db.Column(db.String, nullable=False)
-    address = db.Column(db.String, nullable=False)
+    location_name = db.Column(db.String, nullable=False),
     lat = db.Column(db.Integer, nullable=False)
     long = db.Column(db.Integer, nullable=False)
     desc = db.Column(db.String)
     search_key = db.Column(db.String, nullable=False)
 
     def __repr__(self):
-        return f'<Location location_id={self.location_id} name={self.name} \
-                address={self.address} lat={self.lat} long={self.long}>'
+        return f'<Location location_id={self.location_id} location_name={self.location_name} lat={self.lat} long={self.long}>'
 
 class Video(db.Model):
     """A video"""

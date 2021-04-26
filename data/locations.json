@@ -1,0 +1,30 @@
+[
+    {
+        "location_name": "South Island, New Zealand",
+        "lat": 45.1527,
+        "long": 169.8926,
+        "desc": "New Zealand's South Island brims with majestic landscapes at every turn, from dramatic mountains to fjords to glaciers. Here, you can explore Fiordland National Park, a UNESCO World Heritage Area, or gaze at the starry skies at Mount John Observatory. You can also indulge your inner daredevil in Queenstown, explore two of the most accessible glaciers in the world on the country's west coast or sample delicious food and wine in the Marlborough region.",
+        "search_key": "south island new zealand tour"
+    },
+    {
+        "location_name": "Paris", 
+        "lat": 48.8566,
+        "long": 2.3522,
+        "desc": "The City of Light draws millions of visitors every year with its unforgettable ambiance. Of course, the divine cuisine and vast art collections deserve some of the credit as well. The gentle River Seine rambles through the city, flanked by stately museums, centuries-old churches, and blocks of Rococo- and Neoclassic-design architecture, further enhanced by cascading trees and glowing streetlamps.",
+        "search_key": "paris tour"
+    },
+    {
+        "location_name": "Bora Bora", 
+        "lat": 16.5004,
+        "long": 151.7415,
+        "desc": "What this small island may lack in size it makes up for in sheer tropical beauty. Here, you'll find picturesque beaches, lush jungles and luxurious resorts. The island's dormant volcano, Mount Otemanu, makes for a great photo-op or challenging hike, and the friendly Bora Bora locals can help you catch a glimpse of the island's best sights during an off-road excursion.",
+        "search_key": "bora bora tour"
+    },
+    {
+        "location_name": "Glacier National Park", 
+        "lat": 48.7596,
+        "long": 113.7870,
+        "desc": "Snow-capped peaks and azure lakes are just two reasons why Glacier National Park is one of the most-visited parks in the United States. There are more than 700 miles of hiking trails in this Montana park, plus 13 designated areas for camping. In winter, travelers can enjoy snowshoeing and skiing, while  summer is when vacationers can go swimming and whitewater rafting, among other popular activities.",
+        "search_key": "glacier national park tour"
+    }
+]
