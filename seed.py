@@ -20,11 +20,25 @@ with open('data/locations.json') as f:
 
 locations_in_db = []
 for location in location_data:
-    location_name, lat, long, desc, search_key = (location['location_name'],
-                                                location['lat'],
-                                                location['long'],
-                                                location['desc'],
-                                                location['search_key'])
+    location_name, lat, long, desc = (location['location_name'],
+                                    location['lat'],
+                                    location['long'],
+                                    location['desc'])
 
-    db_location = crud.create_location(location_name, lat, long, desc, search_key)
+    db_location = crud.create_location(location_name, lat, long, desc)
     locations_in_db.append(db_location)
+
+
+with open('data/videos.json') as f:
+    video_data = json.loads(f.read())
+
+
+videos_in_db = []
+for video in video_data:
+    title, url, desc, tag  = (video['title'],
+                            video['url'],
+                            video['desc'],
+                            video['tag'])
+
+    db_video = crud.create_video(title, url, desc, tag)
+    locations_in_db.append(db_video)

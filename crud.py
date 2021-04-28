@@ -1,30 +1,32 @@
 # """CRUD operations."""
 
-from model import db, User, Location, connect_to_db
+from model import db, VideoLocation, Video, Location, connect_to_db
 
-def create_user(email, password):
-    """Create and return a new user."""
-
-    user = User(email=email, password=password)
-
-    db.session.add(user)
-    db.session.commit()
-
-    return user
-
-def create_location(location_name, lat, long, desc, search_key):
+def create_location(location_name, lat, long, desc):
     """Create and return a new location on the map."""
 
     location = Location(location_name=location_name,
                         lat=lat,
                         long=long,
-                        desc=desc,
-                        search_key=search_key)
+                        desc=desc)
 
     db.session.add(location)
     db.session.commit()
 
     return location
+
+def create_video(title, url, desc, tag):
+    """Create and return a new video."""
+
+    video = Video(title=title,
+                url=url,
+                desc=desc,
+                tag=tag)
+
+    db.session.add(video)
+    db.session.commit()
+
+    return video
 
 if __name__ == '__main__':
     from server import app

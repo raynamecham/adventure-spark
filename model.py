@@ -4,19 +4,43 @@ from flask_sqlalchemy import SQLAlchemy
 
 db = SQLAlchemy()
 
-class User(db.Model):
-    """A user."""
+class VideoLocation(db.Model):
+    """Video of a specific location."""
 
-    __tablename__ = 'users'
+    ___tablename___= 'videos_locations'
 
-    user_id = db.Column(db.Integer,
-                        autoincrement=True,
-                        primary_key=True)
-    email = db.Column(db.String, unique=True)
-    password = db.Column(db.Text)
+    video_location_id = db.Column(db.Integer,
+                                autoincrement=True,
+                                primary_key=True)
+    location_id = db.Column(db.Integer,
+                            db.ForeignKey('locations.location_id'),
+                            nullable=False)
+    video_id = db.Column(db.Integer,
+                        db.ForeignKey('videos.video_id'),
+                        nullable=False)
+
+    location = db.relationship("Location", backref="locations")
+    video = db.relationship("Video", backref="videos")
 
     def __repr__(self):
-        return f'<User user_id={self.user_id}>'
+        return "<VideoLocation location_id={} video_id={}>".format(self.location_id, self.video_id)
+
+
+class Video(db.Model):
+    """A video"""
+
+    __tablename__ = 'videos'
+
+    video_id = db.Column(db.Integer,
+                        autoincrement=True,
+                        primary_key=True)
+    title = db.Column(db.String, nullable=False)
+    url = db.Column(db.String, nullable=False)
+    desc = db.Column(db.String)
+    tag = db.Column(db.String, nullable=False)
+
+    def __repr__(self):
+        return f'<Video video_id={self.video_id} title={self.title}> '
 
 class Location(db.Model):
     """A location on the map"""
@@ -30,30 +54,10 @@ class Location(db.Model):
     lat = db.Column(db.Integer, nullable=False)
     long = db.Column(db.Integer, nullable=False)
     desc = db.Column(db.String)
-    search_key = db.Column(db.String, nullable=False)
 
     def __repr__(self):
         return f'<Location location_id={self.location_id} location_name={self.location_name} lat={self.lat} long={self.long}>'
 
-class Video(db.Model):
-    """A video"""
-
-    __tablename__ = 'videos'
-
-    video_id = db.Column(db.Integer,
-                        autoincrement=True,
-                        primary_key=True)
-    title = db.Column(db.String, nullable=False)
-    url = db.Column(db.String, nullable=False)
-    desc = db.Column(db.String)
-    search_key = db.Column(db.String, db.ForeignKey('locations.search_key'))
-    user_id = db.Column(db.Integer, db.ForeignKey('users.user_id'))
-
-    location = db.relationship('Location', backref='videos')
-    user = db.relationship('User', backref='videos')
-
-    def __repr__(self):
-        return f'<Video video_id={self.video_id} title={self.title}> '
 
 def connect_to_db(app):
     """Connect the database to Flask app."""
