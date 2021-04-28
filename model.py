@@ -51,8 +51,8 @@ class Location(db.Model):
                         autoincrement=True,
                         primary_key=True)
     location_name = db.Column(db.String, nullable=False)
-    lat = db.Column(db.Integer, nullable=False)
-    long = db.Column(db.Integer, nullable=False)
+    lat = db.Column(db.Float, nullable=False)
+    long = db.Column(db.Float, nullable=False)
     desc = db.Column(db.String)
 
     def __repr__(self):

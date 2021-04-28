@@ -28,7 +28,7 @@ function initMap() {
         </div>
 
         <ul class="location-info">
-          <li>${location.locationName}</li>
+          <li>${location.name}</li>
         </ul>
       </div>
     `);
@@ -39,9 +39,6 @@ function initMap() {
         lng: location.longitude
       },
       title: `Location: ${location.locationID}`,
-      icon: {
-        scaledSize: new google.maps.Size(20, 20)
-      },
       map: map,
     });
 
