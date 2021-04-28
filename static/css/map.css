@@ -42,8 +42,8 @@ body {
   }
   
   .map, #map {
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 80%;
   }
 
   div.window-content {
@@ -70,6 +70,3 @@ body {
     margin: 1em 0 1em 1em;
   }
   
-  img[src="/static/img/placeholder.png"] {
-    filter: drop-shadow(0 0 3px #2056c033);
-  }

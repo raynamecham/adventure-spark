@@ -20,7 +20,7 @@ def homepage():
 def view_map():
     """View map."""
 
-    return render_template("map.html")
+    return render_template("main-page.html")
 
 @app.route('/api/locations')
 def location_info():
@@ -43,7 +43,7 @@ def location_info():
 def view_videos():
     """View videos."""
 
-    return render_template("map.html")
+    return render_template("main-page.html")
 
 @app.route('/api/videos')
 def video_info():

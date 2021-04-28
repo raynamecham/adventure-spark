@@ -1,12 +1,13 @@
 "use strict";
 
+//Google Map functions
+
 function initMap() {
   const map = new google.maps.Map(document.getElementById("map"), {
     mapId: "7c96088359f57898",
     center: { lat: 51.507351, lng: -0.127758 },
     zoom: 5,
     scrollwheel: true,
-    zoom: 5,
     zoomControl: true,
     panControl: false,
     streetViewControl: false
@@ -39,8 +40,7 @@ function initMap() {
       },
       title: `Location: ${location.locationID}`,
       icon: {
-        url: '/static/img/placeholder.png',
-        scaledSize: new google.maps.Size(50, 50)
+        scaledSize: new google.maps.Size(20, 20)
       },
       map: map,
     });
@@ -53,3 +53,5 @@ function initMap() {
   }
 });
 };
+
+

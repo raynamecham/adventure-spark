@@ -8,13 +8,22 @@
     async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOk3yXP1PNSBExCoO6Vh0-o7mTUElZWAY&map_ids=7c96088359f57898&callback=initMap">
   </script>
+  <script src="https://apis.google.com/js/api.js"></script>
+
 {% endblock %}
 
 {% block body %}
 
   <main>
-    <section class="map">
+    <div class="map">
       <div id="map"></div>
-    </section>
+    </div>
+
+    <div class="youtube">
+      <div id="youtube">
+        <button onclick="loadClient()">load</button>
+        <button onclick="execute()">execute</button>
+      </div>
+    </div>
   </main>
 {% endblock %}
