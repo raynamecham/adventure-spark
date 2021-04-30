@@ -12,7 +12,7 @@ class User(db.Model):
     user_id = db.Column(db.Integer,
                     autoincrement=True,
                     primary_key=True)
-    name = db.Column(db.String, unique=True, nullable=False)
+    name = db.Column(db.String, nullable=False)
     email= db.Column(db.String, unique=True, nullable=False)
     password= db.Column(db.String, nullable=False)
 
@@ -28,10 +28,10 @@ class Location(db.Model):
     location_id = db.Column(db.Integer,
                     autoincrement=True,
                     primary_key=True)
-    location_name = db.Column(db.String, unique=True, nullable=False)
-    lat = db.Column(db.Float, unique=True, nullable=False)
-    long = db.Column(db.Float, unique=True, nullable=False)
-    desc = db.Column(db.String)
+    location_name = db.Column(db.String, nullable=False)
+    lat = db.Column(db.Float, nullable=False)
+    long = db.Column(db.Float, nullable=False)
+    desc = db.Column(db.Text)
 
     def __repr__(self):
         return f'<Location location_id={self.location_id} location_name={self.location_name} lat={self.lat} long={self.long}>'
@@ -45,7 +45,7 @@ class Adventure(db.Model):
                     autoincrement=True,
                     primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey('users.user_id'), nullable=False)
-    location_id = db.Column(db.Integer, db.ForeignKey('locations.locations_id'), nullable=False)
+    location_id = db.Column(db.Integer, db.ForeignKey('locations.location_id'), nullable=False)
     visited = db.Column(db.Boolean, default=False, nullable=False)
 
     user = db.relationship('User', backref='adventures')

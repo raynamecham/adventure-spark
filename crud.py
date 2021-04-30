@@ -19,18 +19,14 @@ def get_users():
 
     return User.query.all()
 
-def get_user_by_id(user_id):
-    """Return a user by id"""
+def get_user(param_type, param):
+    """Return user by email or id"""
 
-    return User.query.get(user_id)
+    if (param_type == "email"):
+        return User.query.filter(User.email == param).first()
+    elif (param_type == "id"):
+        return User.query.get(param)
 
-def get_user_by_email(email):
-    """Return a user by email."""
-
-    return User.query.filter(User.email == email).first()
-
-# def update_user():
-#     """Update user info."""
 
 def delete_user(user_id):
     """Delete user."""
@@ -62,21 +58,57 @@ def get_locations():
 
     return Location.query.all()
 
-def get_location_by_name(location_name):
-    """Return a location by name."""
+def get_location(location_id):
+    """Return a location by id."""
 
-    return Location.query.get(location_name)
+    return Location.query.get(location_id)
+
 
 # def update_location():
 #     """Update location info."""
 
-def delete_location(location_name):
+def delete_location(location_id):
     """Delete a location by name."""
 
-    location = Location.query.get(location_name)
+    location = Location.query.get(location_id)
 
     db.session.delete(location)
     db.session.commit()
+
+
+# Adventure functions
+
+def create_adventure(user_id, location_id):
+    """Create new adventure"""
+
+    adventure = Adventure(user_id=user_id, location_id=location_id)
+
+    db.session.add(adventure)
+    db.session.commit()
+
+def get_adventure(id):
+    """Get an adventure by id."""
+
+    return Adventure.query.get(id)
+
+def get_adventures(user_id = 0):
+    """Return all adventures by a user if id is given.
+        Otherwise, return all adventures."""
+
+    if user_id == 0:
+        return Adventure.query.all()
+    else: 
+        return Adventure.query.get(user_id)
+
+def delete_adventure(id):
+    """Delete an adventure"""
+
+    adventure = Adventure.query.get(id)
+
+    db.session.delete(adventure)
+    db.session.commit()
+
+
 
 if __name__ == '__main__':
     from server import app
