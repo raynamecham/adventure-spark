@@ -1,72 +1,29 @@
-body {
-    display: grid;
-    grid-template: 'head' 'map' 1fr / auto;
-  }
-  
-  header {
-    grid-area: head;
-  }
-  
-  main {
-    grid-area: map;
-  }
-  
-  nav {
-    display: flex;
-    background: rgb(88, 89, 91);
-  }
-  
-  nav p, nav a, nav button {
-    display: inline-block;
-    color: white;
-    padding: 0;
-    margin: 0.5em;
-    font-size: 1em;
-    font-family: inherit;
-  }
-  
-  nav a, nav button {
-    background: transparent;
-    background: transparent;
-    border-top: 0;
-    border-left: 0;
-    border-right: 0;
-    border-bottom: 1px solid white;
-    text-decoration: none;
-  }
-  
-  nav a:hover, nav button:hover {
-    cursor: pointer;
-    border-bottom: 0;
-    color: yellow;
-  }
-  
-  .map, #map {
-    width: 80%;
-    height: 80%;
-  }
+#map {
+  width: 500px;
+  height: 500px;
+  background-color: grey;
+}
 
-  div.window-content {
-    overflow: hidden;
-    display: flex;
-    max-width: 300px;
-  }
-  
-  .location-thumbnail {
-    flex: 1 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .location-thumbnail img {
-    width: 100%;
-  }
-  
-  .window-content ul {
-    flex: 1 0;
-    list-style: none;
-    padding: 0;
-    margin: 1em 0 1em 1em;
-  }
-  
+div.window-content {
+  overflow: hidden;
+  display: flex;
+  max-width: 300px;
+}
+
+.location-thumbnail {
+  flex: 1 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.location-thumbnail img {
+  width: 100%;
+}
+
+.window-content ul {
+  flex: 1 0;
+  list-style: none;
+  padding: 0;
+  margin: 1em 0 1em 1em;
+}

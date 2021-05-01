@@ -15,7 +15,7 @@ function initMap() {
 
   const locationInfo = new google.maps.InfoWindow();
 
-  $.get('/api/locations', (locations) => {
+  $.get('/api/homepage', (locations) => {
     for (const location of locations) {
       // Define the content of the infoWindow
       const locationInfoContent = (`

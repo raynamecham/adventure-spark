@@ -1,13 +1,65 @@
 {% extends 'base.html' %}
+
 {% block title %}Adventure Spark{% endblock %}
 
+{% block head %}
+{% endblock %}
+
 {% block body %}
-  <h1>Welcome to Adventure Spark!</h1>
 
-  <h2>Explore the map to find your next adventure.</h2>
-  <p>
-    <a href="/locations">View the map and videos</a>
-  </p>
+<!--Navigation bar-->
 
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">Adventure Spark</a>
+        <button type="button" data-toggle="dropdown" class="btn btn-outline-secondary dropdown-toggle">Login <span class="caret"></span></button>
+        <ul class="dropdown-menu dropdown-menu-right mt-2">
+            <li class="px-3 py-2">
+                <form class="form" role="form">
+                    <div class="form-group">
+                        <input id="emailInput" placeholder="Email" class="form-control form-control-sm" type="text" required="">
+                    </div>
+                    <div class="form-group">
+                        <input id="passwordInput" placeholder="Password" class="form-control form-control-sm" type="text" required="">
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-block">Login</button>
+                    </div>
+                </form>
+            </li>
+        </ul>
+    </div>
+  </nav>
+
+  <!--Map-->
+
+  <div class="container">
+
+    <div class="row">
+      
+      <div class="embed-responsive col-lg-7 col-md-8 col-sm-12 mt-5">
+        <div id="map-container" class="embed-responsive-item"></div>
+        <div id="map"></div>
+      </div>
+  
+<!--Youtube Videos-->
+      <div class="col-lg-5 col-md-4 col-sm-12 mt-5">
+        <div id="youtube">
+          <p>youtube videos here</p>
+          <iframe width="420" height="315"
+          src="https://www.youtube.com/embed/xEeFrLSkMm8">
+          </iframe>
+        </div>
+      </div>
+
+    </div>  
+
+  </div>
+
+<!--Google Maps script and api key-->
+  <script
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOk3yXP1PNSBExCoO6Vh0-o7mTUElZWAY&callback=initMap&libraries=&v=weekly"
+  async>
+  </script>
 
 {% endblock %}

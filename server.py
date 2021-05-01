@@ -12,17 +12,11 @@ app.jinja_env.undefined = StrictUndefined
 
 @app.route('/')
 def homepage():
-    """View homepage."""
+    """View homepage with map."""
 
     return render_template('homepage.html')
 
-@app.route("/locations")
-def view_map():
-    """View map."""
-
-    return render_template("main-page.html")
-
-@app.route('/api/locations')
+@app.route('/api/homepage')
 def location_info():
     """JSON information about locations."""
 
