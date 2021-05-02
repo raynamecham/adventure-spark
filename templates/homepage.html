@@ -8,28 +8,27 @@
 {% block body %}
 
 <!--Navigation bar-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/">Adventure Spark</a>      
+      <button type="button" data-toggle="dropdown" class="btn btn-outline-secondary dropdown-toggle ml-auto">Login <span class="caret"></span></button>
+      <ul class="dropdown-menu dropdown-menu-right mt-2">
+          <li class="px-3 py-2">
+              <form class="form" role="form">
+                  <div class="form-group">
+                      <input id="emailInput" placeholder="Email" class="form-control form-control-sm" type="text" required="">
+                  </div>
+                  <div class="form-group">
+                      <input id="passwordInput" placeholder="Password" class="form-control form-control-sm" type="text" required="">
+                  </div>
+                  <div class="form-group">
+                      <button type="submit" class="btn btn-primary btn-block">Login</button>
+                  </div>
+              </form>
+          </li>
+      </ul>
+    </nav>
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="/">Adventure Spark</a>
-        <button type="button" data-toggle="dropdown" class="btn btn-outline-secondary dropdown-toggle">Login <span class="caret"></span></button>
-        <ul class="dropdown-menu dropdown-menu-right mt-2">
-            <li class="px-3 py-2">
-                <form class="form" role="form">
-                    <div class="form-group">
-                        <input id="emailInput" placeholder="Email" class="form-control form-control-sm" type="text" required="">
-                    </div>
-                    <div class="form-group">
-                        <input id="passwordInput" placeholder="Password" class="form-control form-control-sm" type="text" required="">
-                    </div>
-                    <div class="form-group">
-                        <button type="submit" class="btn btn-primary btn-block">Login</button>
-                    </div>
-                </form>
-            </li>
-        </ul>
-    </div>
-  </nav>
+  
 
   <!--Map-->
 
@@ -52,7 +51,7 @@
         </div>
       </div>
 
-    </div>  
+    </div>
 
   </div>
 
