@@ -7,42 +7,47 @@
 
 {% block body %}
 
+<!--Page Header-->
+
+<div class="page-header">
+  <img src="/static/img/page_header.png" alt="Adventure Spark Logo">
+</div>
+
 <!--Navigation bar-->
 <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
-  <a class="navbar-brand" href="/"><img src="/static/img/largelogo.jpg"></a>
-    <ul class="navbar-nav mx-auto"> 		
-        <div class="navbar-nav ml-auto action-buttons">
-          <div class="nav-item dropdown">
-            <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle mr-4">Login</a>
-            <div class="dropdown-menu action-form">
-              <form action="/login" method="post">
-                <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Username" required="required">
-                </div>
-                <div class="form-group">
-                  <input type="password" class="form-control" placeholder="Password" required="required">
-                </div>
-                <input type="submit" class="btn btn-primary" value="Login">
-              </form>
+  <ul class="navbar-nav mx-auto"> 		
+    <div class="navbar-nav ml-auto action-buttons">
+      <div class="nav-item dropdown">
+        <a href="/login" data-toggle="dropdown" class="nav-link dropdown-toggle mr-4">Login</a>
+          <div class="dropdown-menu action-form">
+          <form action="/login" method="post">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Username" required="required">
             </div>
+            <div class="form-group">
+              <input type="password" class="form-control" placeholder="Password" required="required">
+            </div>
+              <input type="submit" class="btn btn-primary" value="Login">
+          </form>
           </div>
-			<div class="nav-item dropdown">
-				<a href="#" data-toggle="dropdown" class="btn btn-primary dropdown-toggle sign-up-btn">Sign up</a>
-                <div class="dropdown-menu action-form">
-					<form action="/signup" method="post">
-						<p class="hint-text">Fill in this form to create your account!</p>
-						<div class="form-group">
-							<input type="text" class="form-control" placeholder="Username" required="required">
-						</div>
-						<div class="form-group">
-							<input type="password" class="form-control" placeholder="Password" required="required">
-						</div>
-						<input type="submit" class="btn btn-primary btn-block" value="Sign up">
-					</form>
-				</div>
-			</div>
-        </div>
-	</div>
+      </div>
+      <div class="nav-item dropdown">
+        <a href="/signup" data-toggle="dropdown" class="btn btn-primary dropdown-toggle sign-up-btn">Sign up</a>
+          <div class="dropdown-menu action-form">
+          <form action="/signup" method="post">
+            <p class="hint-text">Fill in this form to create your account!</p>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Username" required="required">
+            </div>
+            <div class="form-group">
+              <input type="password" class="form-control" placeholder="Password" required="required">
+            </div>
+            <input type="submit" class="btn btn-primary btn-block" value="Sign up">
+          </form>
+          </div>
+      </div>
+    </div>
+  </ul>
 </nav>
 
   
@@ -52,10 +57,10 @@
   <div class="container">
 
     <div class="row">
-      
-      <div class="embed-responsive col-lg-10 col-md-8 col-sm-12 mt-5">
-        <div class="embed-responsive-item"></div>
-        <div id="map"></div>
+      <div class="col-lg-10 col-md-8 col-sm-12">
+        <div class="embed-responsive-16by9 mt-5">
+          <div class="embed-responsive-item" id="map"></div>
+        </div>
       </div>
   
 <!--Youtube Videos-->

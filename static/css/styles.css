@@ -2,6 +2,13 @@ body {
 	font-family: 'Questrial', sans-serif;
 }
 
+/* page header photo*/
+
+.page-header img{
+	height: auto;
+	width: auto; 
+}
+
 /* navbar */
 
 .form-control {
@@ -16,7 +23,7 @@ body {
 	border-radius: 0;
 }
 .navbar-custom {
-	background-color: antiquewhite;
+	background-color: #fff8f3;
 }
 .nav-link img {
 	border-radius: 50%;
