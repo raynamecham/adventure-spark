@@ -9,7 +9,7 @@
 
 <!--Page Header-->
 
-<div class="page-header">
+<div class="page-header img-fluid">
   <img src="/static/img/page_header.png" alt="Adventure Spark Logo">
 </div>
 
@@ -20,9 +20,9 @@
       <div class="nav-item dropdown">
         <a href="/login" data-toggle="dropdown" class="nav-link dropdown-toggle mr-4">Login</a>
           <div class="dropdown-menu action-form">
-          <form action="/login" method="post">
+          <form action="/login" method="POST">
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Username" required="required">
+              <input type="text" class="form-control" placeholder="Email" required="required">
             </div>
             <div class="form-group">
               <input type="password" class="form-control" placeholder="Password" required="required">
@@ -37,7 +37,10 @@
           <form action="/signup" method="post">
             <p class="hint-text">Fill in this form to create your account!</p>
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Username" required="required">
+              <input type="text" class="form-control" placeholder="Name" required="required">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Email" required="required">
             </div>
             <div class="form-group">
               <input type="password" class="form-control" placeholder="Password" required="required">

@@ -24,13 +24,14 @@ function initMap() {
       <div class="window-content">
         <div class="location-thumbnail">
           <img
-            src="/static/img/placeholder.png"
-            alt="placeholder"
+            src=${location.image}
+            alt='Image of ${location.name}'
           />
         </div>
 
         <ul class="location-info">
-          <li>${location.name}</li>
+          <li><b>${location.name}</b></li>
+          <li>${location.description}</li>
         </ul>
       </div>
     `);

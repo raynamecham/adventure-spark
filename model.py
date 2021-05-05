@@ -32,6 +32,8 @@ class Location(db.Model):
     lat = db.Column(db.Float, nullable=False)
     long = db.Column(db.Float, nullable=False)
     desc = db.Column(db.Text)
+    img_path = db.Column(db.String, default='/static/img/default_image.png')
+
 
     def __repr__(self):
         return f'<Location location_id={self.location_id} location_name={self.location_name} lat={self.lat} long={self.long}>'

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}My Adventure List{% endblock %}
+
+{% block head %}
+{% endblock %}
+
+{% block body %}
+
+<h2>Welcome, {{ user.name }}! Here's your list of adventures:</h2>
+    <ul>
+        <li>{{ location.location_id }}</li>
+    </ul>
+{% endblock %}
