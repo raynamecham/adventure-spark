@@ -4,6 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 
 db = SQLAlchemy()
 
+
 class User(db.Model):
     """A user"""
 
@@ -17,7 +18,7 @@ class User(db.Model):
     password= db.Column(db.String, nullable=False)
 
     def __repr__(self):
-        return f'<Name name={self.name} Email email={self.email}>'
+        return f'<Name name={self.name} Email email={self.email} ID user_id={self.user_id}>'
 
 
 class Location(db.Model):

@@ -27,7 +27,6 @@ def get_user(param_type, param):
     elif (param_type == "id"):
         return User.query.get(param)
 
-
 def delete_user(user_id):
     """Delete user."""
 
@@ -35,7 +34,6 @@ def delete_user(user_id):
 
     db.session.delete(user)
     db.session.commit()
-
 
 
 #Location functions

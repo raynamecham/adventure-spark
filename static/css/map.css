@@ -21,9 +21,7 @@ div.window-content {
   width: 100%;
 }
 
-.window-content ul {
+.location-information {
   flex: 1 0;
-  list-style: none;
-  padding: 0;
-  margin: 1em 0 1em 1em;
+  padding-left: 15px;
 }

@@ -82,13 +82,14 @@ body {
     margin-bottom: 15px;
     font-size: 13px;
 }
-.navbar .btn-primary, .navbar .btn-primary:active {
-	color: #fff;
+.btn-primary, .btn-primary:active {
+	color: #fff !important;
 	background: #588091 !important;
-	border: none;
-}	
-.navbar .btn-primary:hover, .navbar .btn-primary:focus {		
-	color: #fff;
+	border: none !important;
+}
+
+.btn-primary:hover, .btn-primary:focus {		
+	color: #fff !important;
 	background: #86a7b7 !important;
 }
 
