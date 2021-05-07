@@ -5,8 +5,8 @@ function addToList(button){
   console.log('location id:', locationId);
 }
 
-//   // ajax post the location id to a route called "/add-to-current-users-list" or something
-//   // and that would update the user's list and then render the homepage with a success alert
+// ajax post the location id to a route called "/add-to-current-users-list" or something
+// and that would update the user's list and then render the homepage with a success alert
 
 //Google Map functions
 
