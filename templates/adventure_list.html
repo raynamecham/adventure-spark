@@ -24,13 +24,26 @@
 <div class="container">
     <h1>My list of adventures:</h1>
     <div class="row">
-        <ul>
+        <div class="col">
             {% for adventure in adventures %}
+            <ul>
+                {% for location in locations %}
+                    {% if location.location_id == adventure.location_id %}
+
                 <li>
-                    {{ adventure.adventure_id }}
+                    Location Name: {{ location.location_name }}
                 </li>
+
+                    {% endif %}
+                {% endfor %}
+
+                <li>
+                    Visited: {{ adventure.visited }}
+                </li>
+
+            </ul>
             {% endfor %}
-        </ul>
+        </div>
     </div>
 </div>
 

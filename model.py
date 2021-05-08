@@ -55,7 +55,7 @@ class Adventure(db.Model):
     location = db.relationship('Location', backref='adventures')
 
     def __repr__(self):
-        return f'<User user_id={self.user_id} Location location_id={self.location_id}>'
+        return f'<User user_id={self.user_id} Location location_id={self.location_id} Visited visited={self.visited}>'
 
 
 def connect_to_db(app):

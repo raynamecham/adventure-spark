@@ -98,16 +98,17 @@ def view_adventures():
     """View user's list of adventures. """
 
     adventures = crud.get_adventures()
+    locations = crud.get_locations()
 
-    return render_template('adventure_list.html', adventures=adventures)
+    return render_template('adventure_list.html', adventures=adventures, locations=locations)
 
-@app.route('/adventure_list/<adventure_id>')
-def show_adventures(adventure_id):
-    """View user's list of adventures. """
+# @app.route('/adventure/<adventure_id>')
+# def show_adventures(adventure_id):
+#     """View user's list of adventures. """
 
-    adventure = crud.get_adventures_by_id(adventure_id)
+#     adventure = crud.get_adventure(adventure_id)
 
-    return render_template('adventure_list.html', adventure=adventure)
+#     return render_template('adventure_list.html', adventure=adventure)
 
 if __name__ == "__main__":
     app.debug = True

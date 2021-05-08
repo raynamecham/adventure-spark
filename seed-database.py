@@ -25,4 +25,7 @@ for location in location_data:
     db_location = crud.create_location(location_name, lat, long, desc)
     locations_in_db.append(db_location)
 
+crud.create_adventure(1, 3)
 crud.create_adventure(1, 1)
+crud.create_adventure(1, 4)
+crud.create_adventure(1, 2)
