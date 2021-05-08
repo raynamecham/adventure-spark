@@ -44,7 +44,7 @@ class Adventure(db.Model):
 
     __tablename__ = 'adventures'
 
-    id = db.Column(db.Integer,
+    adventure_id = db.Column(db.Integer,
                     autoincrement=True,
                     primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey('users.user_id'), nullable=False)

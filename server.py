@@ -21,7 +21,9 @@ def homepage():
     session['alert']['type'] = None
     session['alert']['message'] = None
 
-    return render_template('homepage.html')
+    locations = crud.get_locations()
+
+    return render_template('homepage.html', locations=locations)
 
 @app.route('/signup', methods=['POST'])
 def signup():
@@ -95,7 +97,17 @@ def location_info():
 def view_adventures():
     """View user's list of adventures. """
 
-    return render_template('adventure_list.html')
+    adventures = crud.get_adventures()
+
+    return render_template('adventure_list.html', adventures=adventures)
+
+@app.route('/adventure_list/<adventure_id>')
+def show_adventures(adventure_id):
+    """View user's list of adventures. """
+
+    adventure = crud.get_adventures_by_id(adventure_id)
+
+    return render_template('adventure_list.html', adventure=adventure)
 
 if __name__ == "__main__":
     app.debug = True

@@ -12,15 +12,19 @@ function getVideo(locationName) {
             videoEmbeddable: true
         },
         success: function(data){
-            embedVideo(data)
+            embedVideo(data, locationName)
         },
         error: function(response){
             console.log("Request Failed");
+            console.log(response);
         }
     });
 }
 
-function embedVideo(data) {
+function embedVideo(data, locationName) {
+    // update videos-heading
+    $('#videos-heading span.location-name').text(locationName);
+
     for (let i = 0; i < data.items.length; i++) {
         $('#video' + i +' iframe').attr('src', 'https://www.youtube.com/embed/' + data.items[i].id.videoId);
         $('#video' + i +' p').text(data.items[i].snippet.title);

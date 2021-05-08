@@ -21,6 +21,17 @@
     </ul>
 </nav>
 
-<h1>This page isn't ready yet.</h1>  
+<div class="container">
+    <h1>My list of adventures:</h1>
+    <div class="row">
+        <ul>
+            {% for adventure in adventures %}
+                <li>
+                    {{ adventure.adventure_id }}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
 
 {% endblock %}
