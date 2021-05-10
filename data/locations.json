@@ -157,5 +157,15 @@
         "lat": 41.902782,
         "long": 12.496365,
         "desc": "When you visit the Eternal City, prepare to cross a few must-see attractions – including the Colosseum, the Trevi Fountain and the Pantheon – off of your bucket list."
+    },
+    {   "location_name": "Dublin",
+        "lat": 53.350140,
+        "long": -6.266155,
+        "desc": "Known for its traditions, fine literature, folklore, customary music and dance, and fresh pints of Guinness are never in short supply. Travelers should expect to experience the traditional alongside the contemporary when visiting."
+    },
+    {   "location_name": "Edinburgh",
+        "lat": 55.953251,
+        "long": -3.188267,
+        "desc": "Burrowed beside long-dormant volcanoes and reigning over green moorlands, Edinburgh (or Ed-n-bruh in Scots speech) is known for more than its staggering landscape."
     }
 ]

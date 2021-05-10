@@ -54,6 +54,7 @@ function initMap() {
         },
         title: `Location: ${location.locationID}`,
         map: map,
+        icon: "/static/img/bulb-icon.png"
       });
 
       locationMarker.addListener('click', () => {
