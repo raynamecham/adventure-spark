@@ -23,23 +23,19 @@
 
 <div class="container">
     <h1>My list of adventures:</h1>
+    <h5>Keep track of places you'd like to visit, and check them off your list when you have visited them.</h5>
     <div class="row">
-        <div class="col">
-            {% for adventure in adventures %}
-            <ul>
-                {% for location in locations %}
-                    {% if location.location_id == adventure.location_id %}
+        <div class="col-lg-7">
+            {% for adventure in adventure_list %}
+            <ul class="list-group list-group-flush">
+                {% if adventure.location_id %}
+                
+                <label for="adventure-list-item" class="list-group-item">
+                    <input class="form-check-input me-1 adventure-list-item" type="checkbox" value="">
+                        <span>{{ adventure.location_name }}</span>
+                </label>
 
-                <li>
-                    Location Name: {{ location.location_name }}
-                </li>
-
-                    {% endif %}
-                {% endfor %}
-
-                <li>
-                    Visited: {{ adventure.visited }}
-                </li>
+                {% endif %}
 
             </ul>
             {% endfor %}

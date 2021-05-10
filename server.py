@@ -97,10 +97,11 @@ def location_info():
 def view_adventures():
     """View user's list of adventures. """
 
-    adventures = crud.get_adventures()
-    locations = crud.get_locations()
+    # adventures = crud.get_adventures()
+    # locations = crud.get_locations()
+    adventure_list = crud.get_adventure_list()
 
-    return render_template('adventure_list.html', adventures=adventures, locations=locations)
+    return render_template('adventure_list.html', adventure_list=adventure_list)
 
 # @app.route('/adventure/<adventure_id>')
 # def show_adventures(adventure_id):

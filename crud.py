@@ -84,10 +84,12 @@ def create_adventure(user_id, location_id):
     db.session.add(adventure)
     db.session.commit()
 
-def get_adventure(adventure_id):
+def get_adventure_list():
     """Get an adventure by id."""
 
-    return Adventure.query.get(adventure_id)
+    adventure_list = Location.query.join('adventures').all()
+
+    return adventure_list
 
 def get_adventures(user_id = 0):
     """Return all adventures by a user if id is given.
