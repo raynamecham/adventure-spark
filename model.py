@@ -1,6 +1,7 @@
 """Models for adventure spark app"""
 
 from flask_sqlalchemy import SQLAlchemy
+from datetime import datetime
 
 db = SQLAlchemy()
 
@@ -56,6 +57,21 @@ class Adventure(db.Model):
 
     def __repr__(self):
         return f'<User user_id={self.user_id} Location location_id={self.location_id} Visited visited={self.visited}>'
+
+class YouTubeCache(db.Model):
+    """A Youtube Video"""
+
+    __tablename__ = 'youtube_cache'
+
+    video_id = db.Column(db.String, primary_key=True)
+    video_title = db.Column(db.String, nullable=False)
+    fetched = db.Column(db.DateTime, default=datetime.utcnow, nullable=False)
+    location_id = db.Column(db.Integer, db.ForeignKey('locations.location_id'), nullable=False)
+
+    location = db.relationship('Location', backref='youtube_cache')
+
+    def __repr__(self):
+        return f'<Video video_id={self.video_id} Title video_title={self.video_title} Fetched fetched={self.fetched} Location ID location_id={self.location_id}>'
 
 
 def connect_to_db(app):

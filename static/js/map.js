@@ -61,7 +61,7 @@ function initMap() {
         locationInfo.close();
         locationInfo.setContent(locationInfoContent);
         locationInfo.open(map, locationMarker);
-        getVideo(location.name);
+        getVideo(location.name, location.id);
       });
     }
   });

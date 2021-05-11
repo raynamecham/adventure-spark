@@ -75,7 +75,7 @@ def logout():
     session.clear()
     return redirect('/')
 
-@app.route('/api/locations')
+@app.route('/api/locations', methods=["GET"])
 def location_info():
     """JSON information about locations."""
 
@@ -93,23 +93,38 @@ def location_info():
 
     return jsonify(locations)
 
+
+@app.route('/api/youtube_cache', methods=["GET", "POST"])
+def youtube_cache():
+    """Information about youtube cache"""
+
+    if request.method == "GET":
+        location_id = request.args['location_id']
+        youtube_records = crud.get_youtube_records(location_id)
+
+        return jsonify(youtube_records)
+
+    elif request.method == "POST":
+        location_id = request.form['location_id']
+        # youtube_data = request.form['youtube_data']
+        print(request.form)
+        
+        crud.delete_youtube_records(location_id)
+
+        # for item in youtube_data.items:
+        #     crud.create_youtube_record(item.id.videoId, item.snippet.title, location_id)
+
+        return 'success'
+
+
 @app.route('/adventure_list')
 def view_adventures():
     """View user's list of adventures. """
 
-    # adventures = crud.get_adventures()
-    # locations = crud.get_locations()
     adventure_list = crud.get_adventure_list()
 
     return render_template('adventure_list.html', adventure_list=adventure_list)
 
-# @app.route('/adventure/<adventure_id>')
-# def show_adventures(adventure_id):
-#     """View user's list of adventures. """
-
-#     adventure = crud.get_adventure(adventure_id)
-
-#     return render_template('adventure_list.html', adventure=adventure)
 
 if __name__ == "__main__":
     app.debug = True

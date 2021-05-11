@@ -1,6 +1,6 @@
 # """CRUD operations."""
 
-from model import db, User, Location, Adventure, connect_to_db
+from model import db, User, Location, Adventure, YouTubeCache, connect_to_db
 
 
 
@@ -100,15 +100,49 @@ def get_adventures(user_id = 0):
     else: 
         return Adventure.query.get(user_id)
 
-def delete_adventure(id):
+def delete_adventure(adventure_id):
     """Delete an adventure"""
 
-    adventure = Adventure.query.get(id)
+    adventure = Adventure.query.get(adventure_id)
 
     db.session.delete(adventure)
     db.session.commit()
 
+# YouTubeCache functions
 
+def create_youtube_record(video_id, video_title, location_id):
+    """Create new youtube record"""
+
+    youtube_record = YouTubeCache(video_id=video_id, video_title=video_title, location_id=location_id)
+
+    db.session.add(youtube_record)
+    db.session.commit()
+
+def get_youtube_records(location_id):
+    """Return all youtube records."""
+
+    youtube_records = [
+        {
+            "snippet": {
+                "title": youtube_record.video_title
+            },
+            "id": {
+                "videoId": youtube_record.video_id
+            }
+        }
+        for youtube_record in YouTubeCache.query.filter(YouTubeCache.location_id == location_id).limit(3).all()
+    ]
+    
+    return {"items": youtube_records}
+
+
+def delete_youtube_records(location_id):
+    """Delete an adventure"""
+
+    num_rows_deleted = YouTubeCache.query.filter(YouTubeCache.location_id == location_id).delete()
+
+    db.session.commit()
+    return num_rows_deleted
 
 if __name__ == '__main__':
     from server import app
