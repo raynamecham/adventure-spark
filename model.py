@@ -65,7 +65,7 @@ class YouTubeCache(db.Model):
 
     video_id = db.Column(db.String, primary_key=True)
     video_title = db.Column(db.String, nullable=False)
-    fetched = db.Column(db.DateTime, default=datetime.utcnow, nullable=False)
+    fetched = db.Column(db.DateTime, default=datetime.now, nullable=False)
     location_id = db.Column(db.Integer, db.ForeignKey('locations.location_id'), nullable=False)
 
     location = db.relationship('Location', backref='youtube_cache')

@@ -7,6 +7,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 
 from model import connect_to_db, db, User, Location, Adventure
 import crud
+import json
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "adventurespark"
@@ -105,14 +106,13 @@ def youtube_cache():
         return jsonify(youtube_records)
 
     elif request.method == "POST":
-        location_id = request.form['location_id']
-        # youtube_data = request.form['youtube_data']
-        print(request.form)
+        location_id = request.form['location_id']        
+        items = json.loads(request.form['items'])
         
         crud.delete_youtube_records(location_id)
 
-        # for item in youtube_data.items:
-        #     crud.create_youtube_record(item.id.videoId, item.snippet.title, location_id)
+        for item in items:
+            crud.create_youtube_record(item['id']['videoId'], item['snippet']['title'], location_id)
 
         return 'success'
 

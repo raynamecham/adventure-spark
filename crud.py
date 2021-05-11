@@ -1,8 +1,7 @@
 # """CRUD operations."""
 
 from model import db, User, Location, Adventure, YouTubeCache, connect_to_db
-
-
+from datetime import datetime, timedelta
 
 #User functions
 
@@ -121,6 +120,8 @@ def create_youtube_record(video_id, video_title, location_id):
 def get_youtube_records(location_id):
     """Return all youtube records."""
 
+    twentyFourHoursAgo = datetime.now() - timedelta(hours = 24)
+
     youtube_records = [
         {
             "snippet": {
@@ -130,7 +131,7 @@ def get_youtube_records(location_id):
                 "videoId": youtube_record.video_id
             }
         }
-        for youtube_record in YouTubeCache.query.filter(YouTubeCache.location_id == location_id).limit(3).all()
+        for youtube_record in YouTubeCache.query.filter(YouTubeCache.location_id == location_id, YouTubeCache.fetched > twentyFourHoursAgo).limit(3).all()
     ]
     
     return {"items": youtube_records}

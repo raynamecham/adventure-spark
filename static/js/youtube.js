@@ -27,12 +27,12 @@ function getVideo(locationName, locationId) {
                         $.post({
                             url: '/api/youtube_cache',
                             data: {
-                                youtube_data: youTubeData,
+                                items: JSON.stringify(youTubeData['items']),
                                 location_id: locationId
                             },
-                            success: function(postCacheData){
+                            success: function(){
                                 console.log("YouTube_Cache POST Request Succeeded");
-                                embedVideo(postCacheData, locationName)
+                                embedVideo(youTubeData, locationName)
                             },
                             error: function(response){
                                 console.log("YouTube_Cache POST Request Failed");
