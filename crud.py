@@ -83,8 +83,6 @@ def create_adventure(user_id, location_id):
     db.session.add(adventure)
     db.session.commit()
 
-    return adventure
-
 def get_adventure_list():
     """Get an adventure by id."""
 
