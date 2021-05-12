@@ -1,9 +1,16 @@
 "use strict";
 
 function addToList(button){
-  let locationId = button.getAttribute('data-locationid');
-  console.log('location id:', locationId);
-}
+  let locationId = button.getAttribute('data-location-id');
+  console.log(locationId);
+  $.post({
+    url: '/api/add_to_list',
+    data: {location_id: locationId},
+    success: function(){
+        console.log("Success");
+    }
+  });  
+};
 
 // ajax post the location id to a route called "/add-to-current-users-list" or something
 // and that would update the user's list and then render the homepage with a success alert
@@ -41,7 +48,7 @@ function initMap() {
             <h4>${location.name}</h4>
             <p>${location.description}</p>
             <div class="d-flex justify-content-center">
-              <button type="button" class="add-to-my-list btn btn-primary btn-sm px-3" data-locationid="${location.id}" onclick="addToList(this)">Add To List</button>
+              <button type="button" class="add-to-my-list btn btn-primary btn-sm px-3" data-location-id="${location.id}" onclick="addToList(this)">Add To List</button>
             </div
           </div>
         </div>
@@ -52,7 +59,7 @@ function initMap() {
           lat: location.latitude,
           lng: location.longitude
         },
-        title: `Location: ${location.locationID}`,
+        title: `${location.name}`,
         map: map,
         icon: "/static/img/bulb-icon.png"
       });
@@ -63,6 +70,7 @@ function initMap() {
         locationInfo.open(map, locationMarker);
         getVideo(location.name, location.id);
       });
+
     }
   });
 };

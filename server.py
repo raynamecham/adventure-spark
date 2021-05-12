@@ -66,6 +66,10 @@ def login():
     else:
         session['logged_in'] = True
         session['alert']['type'] = None
+        session['user_email'] = current_user.email
+        session['user_id'] = current_user.user_id
+        session['user_name'] = current_user.name
+
         return render_template('homepage.html')
 
 
@@ -125,6 +129,16 @@ def view_adventures():
 
     return render_template('adventure_list.html', adventure_list=adventure_list)
 
+@app.route('/api/add_to_list', methods=["POST"])
+def add_to_list():
+    """Adds location name to user's adventure list"""
+
+    user_id = session['user_id']
+    location_id = request.form['location_id']
+
+    crud.create_adventure(user_id, location_id)
+
+    return "success"
 
 if __name__ == "__main__":
     app.debug = True
