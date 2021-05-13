@@ -1,8 +1,7 @@
 """Server for adventure spark app."""
 
 from jinja2 import StrictUndefined
-from flask import Flask, render_template, request, redirect, jsonify, flash, session, url_for
-from flask_login import current_user
+from flask import Flask, render_template, request, redirect, jsonify, flash, session, url_for, abort
 from werkzeug.security import generate_password_hash, check_password_hash
 
 from model import connect_to_db, db, User, Location, Adventure
@@ -129,16 +128,28 @@ def view_adventures():
 
     return render_template('adventure_list.html', adventure_list=adventure_list)
 
+
 @app.route('/api/add_to_list', methods=["POST"])
 def add_to_list():
     """Adds location name to user's adventure list"""
 
-    user_id = session['user_id']
-    location_id = request.form['location_id']
+    if 'user_id' not in session:
+        session['alert']['message'] = 'Sign up to use this feature.'
+        session['alert']['type'] = 'warning'
+        # TODO: reload page with alert
 
-    crud.create_adventure(user_id, location_id)
+        return 'something'
 
-    return "success"
+    else:
+        user_id = session['user_id']
+        location_id = request.form['location_id']
+        crud.create_adventure(user_id, location_id)
+
+        session['alert']['message'] = 'Location added to your adventure list!'
+        session['alert']['type'] = 'success'
+        # TODO: reload page with alert
+
+        return 'something'
 
 if __name__ == "__main__":
     app.debug = True

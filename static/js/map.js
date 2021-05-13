@@ -7,7 +7,10 @@ function addToList(button){
     url: '/api/add_to_list',
     data: {location_id: locationId},
     success: function(){
-        console.log("Success");
+      console.log('Add to list returned success code.');
+    },
+    error: function(){
+      console.log('Add to list returned failure code.');
     }
   });  
 };
