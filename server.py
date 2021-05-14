@@ -12,14 +12,16 @@ app = Flask(__name__)
 app.config["SECRET_KEY"] = "adventurespark"
 app.jinja_env.undefined = StrictUndefined
 
+
 @app.route('/')
 @app.route('/home')
 def homepage():
     """View homepage with map."""
-
-    session['alert'] = {}
-    session['alert']['type'] = None
-    session['alert']['message'] = None
+    
+    if 'alert' not in session:
+        session['alert'] = {}
+        session['alert']['type'] = None
+        session['alert']['message'] = None
 
     locations = crud.get_locations()
 
@@ -79,6 +81,7 @@ def logout():
     session.clear()
     return redirect('/')
 
+
 @app.route('/api/locations', methods=["GET"])
 def location_info():
     """JSON information about locations."""
@@ -134,11 +137,8 @@ def add_to_list():
     """Adds location name to user's adventure list"""
 
     if 'user_id' not in session:
-        session['alert']['message'] = 'Sign up to use this feature.'
-        session['alert']['type'] = 'warning'
-        # TODO: reload page with alert
-
-        return 'something'
+        print (session)
+        return redirect('/sign_me_up')
 
     else:
         user_id = session['user_id']
@@ -147,9 +147,14 @@ def add_to_list():
 
         session['alert']['message'] = 'Location added to your adventure list!'
         session['alert']['type'] = 'success'
-        # TODO: reload page with alert
 
-        return 'something'
+        return redirect('/adventure_list', user_id=user_id, location_id=location_id)
+
+@app.route('/sign_me_up')
+def view_sign_up():
+    """View sign up page"""
+
+    return render_template('sign_up.html')
 
 if __name__ == "__main__":
     app.debug = True
