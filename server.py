@@ -71,7 +71,7 @@ def login():
         session['user_id'] = current_user.user_id
         session['user_name'] = current_user.name
 
-        return render_template('homepage.html')
+        return redirect('/')
 
 
 @app.route('/logout')
@@ -137,18 +137,13 @@ def add_to_list():
     """Adds location name to user's adventure list"""
 
     if 'user_id' not in session:
-        print (session)
-        return redirect('/sign_me_up')
+        abort(500)
+        
+    user_id = session['user_id']
+    location_id = request.form['location_id']
+    crud.create_adventure(user_id, location_id)
 
-    else:
-        user_id = session['user_id']
-        location_id = request.form['location_id']
-        crud.create_adventure(user_id, location_id)
-
-        session['alert']['message'] = 'Location added to your adventure list!'
-        session['alert']['type'] = 'success'
-
-        return redirect('/adventure_list', user_id=user_id, location_id=location_id)
+    return 'success'
 
 @app.route('/sign_me_up')
 def view_sign_up():

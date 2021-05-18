@@ -8,9 +8,11 @@ function addToList(button){
     data: {location_id: locationId},
     success: function(){
       console.log('Add to list returned success code.');
+      window.location.href = "/adventure_list";
     },
     error: function(){
       console.log('Add to list returned failure code.');
+      window.location.href = "/sign_me_up";
     }
   });  
 };
@@ -38,7 +40,7 @@ function initMap() {
   $.get('/api/locations', (locations) => {
     for (const location of locations) {
       // Define the content of the infoWindow
-      const locationInfoContent = (`
+      const locationInfoContent = `
         <div class="window-content">
           <div class="location-thumbnail">
             <img
@@ -52,10 +54,10 @@ function initMap() {
             <p>${location.description}</p>
             <div class="d-flex justify-content-center">
               <button type="button" class="add-to-my-list btn btn-primary btn-sm px-3" data-location-id="${location.id}" onclick="addToList(this)">Add To List</button>
-            </div
+            </div>
           </div>
         </div>
-      `);
+      `;
 
       const locationMarker = new google.maps.Marker({
         position: {
