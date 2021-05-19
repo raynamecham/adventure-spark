@@ -145,6 +145,19 @@ def add_to_list():
 
     return 'success'
 
+@app.route('/add_new_location', methods=["POST"])
+def add_new_location():
+    """Adds user input location to Adventure List"""
+
+    if 'user_id' not in session:
+        abort(500)
+        
+    user_id = session['user_id']
+    location_id = request.form['location_id']
+
+    crud.create_location(location_id)
+    crud.create_adventure(user_id, location_id)
+
 @app.route('/sign_me_up')
 def view_sign_up():
     """View sign up page"""
