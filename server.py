@@ -145,8 +145,8 @@ def add_to_list():
 
     return 'success'
 
-@app.route('/add_new_location', methods=["POST"])
-def add_new_location():
+@app.route('/api/add_user_location', methods=["POST"])
+def add_user_location():
     """Adds user input location to Adventure List"""
 
     if 'user_id' not in session:
@@ -155,8 +155,16 @@ def add_new_location():
     user_id = session['user_id']
     location_id = request.form['location_id']
 
-    crud.create_location(location_id)
+    crud.create_user_location(location_id)
     crud.create_adventure(user_id, location_id)
+
+@app.route('/delete_adventure')
+def delete_location(adventure_id):
+    """Deletes an adventure off of user's Adventure List"""
+
+    crud.delete_adventure(adventure_id)
+
+    return 'success'
 
 @app.route('/sign_me_up')
 def view_sign_up():

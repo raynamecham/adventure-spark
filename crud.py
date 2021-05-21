@@ -50,6 +50,16 @@ def create_location(location_name, lat, long, desc):
 
     return location
 
+def create_user_location(location_name):
+    """Create and return a new user added location"""
+
+    user_location = Location(location_name=location_name)
+
+    db.session.add(user_location)
+    db.session.commite()
+
+    return user_location
+
 def get_locations():
     """Return all locations."""
 

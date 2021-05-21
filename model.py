@@ -31,8 +31,8 @@ class Location(db.Model):
                     autoincrement=True,
                     primary_key=True)
     location_name = db.Column(db.String, nullable=False)
-    lat = db.Column(db.Float, nullable=False)
-    long = db.Column(db.Float, nullable=False)
+    lat = db.Column(db.Float)
+    long = db.Column(db.Float)
     desc = db.Column(db.Text)
     img_path = db.Column(db.String, default='/static/img/default_image.png')
 
