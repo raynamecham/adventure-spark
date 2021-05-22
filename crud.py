@@ -1,5 +1,6 @@
 # """CRUD operations."""
 
+from flask.globals import session
 from model import db, User, Location, Adventure, YouTubeCache, connect_to_db
 from datetime import datetime, timedelta
 
@@ -93,21 +94,13 @@ def create_adventure(user_id, location_id):
     db.session.add(adventure)
     db.session.commit()
 
-def get_adventure_list():
+def get_adventures(user_id = 0):
     """Get an adventure by id."""
 
-    adventure_list = Location.query.join('adventures').all()
+    adventures = Location.query.join(Adventure).filter_by(user_id = session['user_id']).all()
 
-    return adventure_list
-
-def get_adventures(user_id = 0):
-    """Return all adventures by a user if id is given.
-        Otherwise, return all adventures."""
-
-    if user_id == 0:
-        return Adventure.query.all()
-    else: 
-        return Adventure.query.get(user_id)
+    print(adventures)
+    return adventures
 
 def delete_adventure(adventure_id):
     """Delete an adventure"""

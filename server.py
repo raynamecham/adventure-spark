@@ -127,9 +127,9 @@ def youtube_cache():
 def view_adventures():
     """View user's list of adventures. """
 
-    adventure_list = crud.get_adventure_list()
+    adventures = crud.get_adventures(session['user_id'])
 
-    return render_template('adventure_list.html', adventure_list=adventure_list)
+    return render_template('adventure_list.html', adventures=adventures)
 
 
 @app.route('/api/add_to_list', methods=["POST"])
@@ -144,19 +144,6 @@ def add_to_list():
     crud.create_adventure(user_id, location_id)
 
     return 'success'
-
-@app.route('/api/add_user_location', methods=["POST"])
-def add_user_location():
-    """Adds user input location to Adventure List"""
-
-    if 'user_id' not in session:
-        abort(500)
-        
-    user_id = session['user_id']
-    location_id = request.form['location_id']
-
-    crud.create_user_location(location_id)
-    crud.create_adventure(user_id, location_id)
 
 @app.route('/delete_adventure')
 def delete_location(adventure_id):

@@ -26,13 +26,14 @@
     <h5>Keep track of places you'd like to visit, and check them off your list when you have visited them.</h5>
     <div class="row">
         <div class="col-lg-7">
-            {% for adventure in adventure_list %}
+            {% for adventure in adventures %}
             <ul id="adventure-list" class="list-group list-group-flush">
                 {% if adventure.location_id %}
                 
                 <label for="adventure-list-item" class="list-group-item">
                     <input class="form-check-input me-1 adventure-list-item" type="checkbox" value="">
                         <span>{{ adventure.location_name }}</span>
+                        <button class="btn btn-primary btn-sm px-3" onclick="deleteAdventure" data-adventure-id="{{ adventure.adventure_id }}">Remove Adventure</button>
                 </label>
 
                 {% endif %}
@@ -41,12 +42,6 @@
 
             {% endfor %}
         </div>
-
-        <div class="col-lg-5">  
-            <input type="text" id="add-location-name" />
-            <button type="button" onclick="addItem()" class="btn btn-primary btn-sm px-3">Add item</button>
-            <button type="button" onclick="removeItem()" class="btn btn-primary btn-sm px-3">Remove item</button>
-        </div> 
     </div>
 </div>
 
