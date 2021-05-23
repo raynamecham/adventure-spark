@@ -145,9 +145,14 @@ def add_to_list():
 
     return 'success'
 
-@app.route('/delete_adventure')
-def delete_location(adventure_id):
+@app.route('/api/delete_adventure', methods=["POST"])
+def delete_adventure():
     """Deletes an adventure off of user's Adventure List"""
+
+    adventure_id = request.form.get('adventure_id')
+
+    if 'user_id' not in session:
+        abort(500)
 
     crud.delete_adventure(adventure_id)
 

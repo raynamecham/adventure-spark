@@ -97,9 +97,7 @@ def create_adventure(user_id, location_id):
 def get_adventures(user_id = 0):
     """Get an adventure by id."""
 
-    adventures = Location.query.join(Adventure).filter_by(user_id = session['user_id']).all()
-
-    print(adventures)
+    adventures = db.session.query(Adventure, Location).filter_by(user_id = session['user_id']).join(Location).all()
     return adventures
 
 def delete_adventure(adventure_id):

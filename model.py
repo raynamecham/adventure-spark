@@ -56,7 +56,7 @@ class Adventure(db.Model):
     location = db.relationship('Location', backref='adventures')
 
     def __repr__(self):
-        return f'<User user_id={self.user_id} Location location_id={self.location_id} Visited visited={self.visited}>'
+        return f'<Adventure Id adventure_id={self.adventure_id} User user_id={self.user_id} Location location_id={self.location_id} Visited visited={self.visited}>'
 
 class YouTubeCache(db.Model):
     """A Youtube Video"""
