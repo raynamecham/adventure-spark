@@ -44,7 +44,14 @@ def signup():
         return render_template('homepage.html')
     else:
         crud.create_user(name, email, password)
+
+        current_user = User.query.filter(User.email == email, User.password == password).first()
+
         session['logged_in'] = True
+        session['user_email'] = current_user.email
+        session['user_id'] = current_user.user_id
+        session['user_name'] = current_user.name
+        
         session['alert']['message'] = 'Welcome to Adventure Spark, ' + name + '!'
         session['alert']['type'] = 'success'
         return render_template('homepage.html')

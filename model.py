@@ -2,6 +2,7 @@
 
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
+from werkzeug.security import generate_password_hash, check_password_hash
 
 db = SQLAlchemy()
 
@@ -16,7 +17,13 @@ class User(db.Model):
                     primary_key=True)
     name = db.Column(db.String, nullable=False)
     email= db.Column(db.String, unique=True, nullable=False)
-    password= db.Column(db.String, nullable=False)
+    password= db.Column(db.String(128), nullable=False)
+
+    def set_password(self, password):
+        self.password = generate_password_hash(password)
+
+    def check_password(self, password):
+        return check_password_hash(self.password, password)
 
     def __repr__(self):
         return f'<Name name={self.name} Email email={self.email} ID user_id={self.user_id}>'
