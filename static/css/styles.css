@@ -5,8 +5,8 @@ body {
 /* page header photo*/
 
 .page-header img{
+	max-width: 100%;
 	height: auto;
-	width: auto; 
 }
 
 /* navbar */
@@ -108,5 +108,12 @@ body {
 }
 	.navbar .nav-item {
     padding: 0.5em 1em;
-	}
+}
+
+/* adventure list page */
+
+#main-adventure-list h1 {
+		display: inline-block;
+}
+
 

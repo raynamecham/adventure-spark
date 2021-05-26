@@ -1,8 +1,8 @@
 """Server for adventure spark app."""
 
 from jinja2 import StrictUndefined
-from flask import Flask, render_template, request, redirect, jsonify, flash, session, url_for, abort
-from werkzeug.security import generate_password_hash, check_password_hash
+from flask import Flask, render_template, request, redirect, jsonify, session, abort
+
 
 from model import connect_to_db, db, User, Location, Adventure
 import crud
@@ -88,6 +88,12 @@ def logout():
     session.clear()
     return redirect('/')
 
+@app.route('/sign_me_up')
+def view_sign_up():
+    """View sign up page"""
+
+    return render_template('sign_up.html')
+
 
 @app.route('/api/locations', methods=["GET"])
 def location_info():
@@ -110,7 +116,7 @@ def location_info():
 
 @app.route('/api/youtube_cache', methods=["GET", "POST"])
 def youtube_cache():
-    """Information about youtube cache"""
+    """JSON information about youtube cache"""
 
     if request.method == "GET":
         location_id = request.args['location_id']
@@ -141,7 +147,7 @@ def view_adventures():
 
 @app.route('/api/add_to_list', methods=["POST"])
 def add_to_list():
-    """Adds location name to user's adventure list"""
+    """Adds location name to user's adventure list, this creates an 'adventure'."""
 
     if 'user_id' not in session:
         abort(500)
@@ -154,7 +160,7 @@ def add_to_list():
 
 @app.route('/api/delete_adventure', methods=["POST"])
 def delete_adventure():
-    """Deletes an adventure off of user's Adventure List"""
+    """Deletes an adventure off user's Adventure List"""
 
     adventure_id = request.form.get('adventure_id')
 
@@ -165,11 +171,19 @@ def delete_adventure():
 
     return 'success'
 
-@app.route('/sign_me_up')
-def view_sign_up():
-    """View sign up page"""
+@app.route('/api/visit_adventure', methods=["GET"])
+def visit_adventure():
+    """Updates user's visited list locations to True"""
 
-    return render_template('sign_up.html')
+    visit = request.form.get('visited')
+
+    if 'user_id' not in session:
+        abort(500)
+    
+    crud.visit_adventure(visit)
+
+    return 'success'
+
 
 if __name__ == "__main__":
     app.debug = True

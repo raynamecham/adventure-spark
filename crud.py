@@ -98,6 +98,15 @@ def delete_adventure(adventure_id):
     db.session.delete(adventure)
     db.session.commit()
 
+def visit_adventure(visited):
+    """Update adventure visited info"""
+
+    visit = Adventure.query.get(visited)
+    visited = True
+
+    db.session.update(visit)
+    db.session.commit()
+
 # YouTubeCache functions
 
 def create_youtube_record(video_id, video_title, location_id):

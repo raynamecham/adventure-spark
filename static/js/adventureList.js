@@ -15,3 +15,24 @@ function deleteAdventure(button) {
         }
     });
 }
+
+// Moves checked item to "Adventures I've Had" list
+
+function visitedAdventure() {
+    let checkBox = document.getElementById("visit-adventure");
+
+    if (checkBox.checked == true) {
+        $.get({
+            url: '/api/visit_adventure',
+            data: {visited: checkBox},
+            success: function(){
+                console.log('visitedAdventure returned success code.');
+            },
+            error: function(){
+                console.log('visitedAdventure returned failure code.');
+            }
+        });
+    } else {
+        console.log ('checkbox is unchecked');
+    };
+}
