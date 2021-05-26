@@ -167,5 +167,150 @@
         "lat": 55.953251,
         "long": -3.188267,
         "desc": "Burrowed beside long-dormant volcanoes and reigning over green moorlands, Edinburgh (or Ed-n-bruh in Scots speech) is known for more than its staggering landscape."
+    },
+    {   "location_name": "Maldives",
+        "lat": 1.924992,
+        "long": 73.399658,
+        "desc": "It is not cheap or easy to reach, but this isolated paradise between the Arabian and Laccadive seas is the personification of a dreamy tropical vacation."
+    },
+    {   "location_name": "Cancun",
+        "lat": 21.161907,
+        "long": -86.851524,
+        "desc": "The seemingly endless stretches of white sand and turquoise water draw millions of visitors to Cancun each year."
+    },
+    {   "location_name": "Amalfi Coast",
+        "lat": 40.634369,
+        "long": 14.602560,
+        "desc": "Few places in the world can rival the natural beauty found along the Amalfi Coast. This region on the southern edge of Italy's Sorrentine Peninsula is home to 13 quaint towns etched into seaside cliffs."
+    },
+    {   "location_name": "New Orleans",
+        "lat": 29.951065,
+        "long": -90.071533,
+        "desc": "Few American cities are home to cultures as unique as the Big Easy's. Offering a blend of influences from the Caribbean, Europe and other locales, New Orleans has a distinct personality."
+    },
+    {   "location_name": "Zion National Park",
+        "lat": 37.298203,
+        "long": -113.026299,
+        "desc": "Awe-inspiring panoramas are available everywhere you turn in Utah's Zion National Park. For some of the best views, hikers recommend trekking the Angels Landing trail, which is full of challenging switchbacks and thrilling heights."
+    },
+    {   "location_name": "Grand Teton National Park",
+        "lat": 43.802460,
+        "long": -110.483078,
+        "desc": "In Grand Teton National Park, Wyoming's snow-topped Teton Mountains rub elbows with the Snake River, Jackson and Jenny lakes, wildflower fields, swamps and more."
+    },
+    {   "location_name": "Washington D.C.",
+        "lat": 38.907192,
+        "long": -77.036873,
+        "desc": "The nation's capital has a lot going for it. Fill your days with visits to iconic landmarks like the Lincoln Memorial and the Washington Monument."
+    },
+    {   "location_name": "Seattle",
+        "lat": 47.606209,
+        "long": -122.332069,
+        "desc": "Seattle's laid-back attitude and diverse neighborhoods more than make up for its consistently cloudy weather. Plus, it's home to some of the country's best coffee and a thriving arts scene, plenty of history, culture and exciting outdoor activities."
+    },
+    {   "location_name": "Portland",
+        "lat": 45.512230,
+        "long": -122.658722,
+        "desc": "From its manicured green spaces to its deliciously diverse food scene, Portland has become a must-see destination in the Pacific Northwest."
+    },
+    {   "location_name": "Vancouver, B.C.",
+        "lat": 49.258843,
+        "long": -123.124359,
+        "desc": "Surrounded by mountains and beaches, Vancouver is both an urban and a natural playground: Its chic atmosphere, high-fashion boutiques and fondness for health-conscious eating have earned it the nickname Hollywood North."
+    },
+    {   "location_name": "Boston",
+        "lat": 42.360081,
+        "long": -71.058884,
+        "desc": "Boston is home to numerous pubs, food markets and shopping thoroughfares, as well as top-notch universities known for their charming architecture, picturesque green spaces and wicked smart students."
+    },
+    {   "location_name": "Las Vegas",
+        "lat": 36.169941,
+        "long": -115.139832,
+        "desc": "Whether you choose to spend your trip testing your luck at its casinos, enjoying the highly regarded buffets or relaxing at extravagant spas and chic pools, Las Vegas offers something for everyone. "
+    },
+    {   "location_name": "Miami",
+        "lat": 25.761681,
+        "long": -80.191788,
+        "desc": "Travel to this South Florida city to experience a melting pot of cultures. The vibrant food and nightlife scenes are worth the trip alone, so grab a frita in Little Havana before dancing the night away in one of the city's countless clubs."
+    },
+    {   "location_name": "San Diego",
+        "lat": 32.715736,
+        "long": -117.161087,
+        "desc": "The city boasts a variety of activities, ranging from hiking in Torrey Pines State Natural Reserve – which sits just north of the city – to surfing at Mission and Pacific beaches."
+    },
+    {   "location_name": "Jeju Island",
+        "lat": 33.489010,
+        "long": 126.498299,
+        "desc": "Blessed with tangerine groves, swaying palm trees, white sand beaches, and a verdant landscape, Korea's southernmost volcanic island has long been a favored holiday and honeymoon retreat for natives and neighbors."
+    },
+    {   "location_name": "Busan",
+        "lat": 35.179554,
+        "long": 129.075638,
+        "desc": "This large, spread out port metropolis seems to have it all. From one-of-a-kind temples and death-defying coastal walkways, to the country’s largest markets and most popular beaches."
+    },
+    {   "location_name": "Hong Kong",
+        "lat": 22.396427,
+        "long": 114.109497,
+        "desc": "This British-Chinese hybrid astounds visitors with its striking juxtaposition of dense skyscrapers and lush landscapes."
+    },
+    {   "location_name": "Shanghai",
+        "lat": 31.230391,
+        "long": 121.473701,
+        "desc": "Discover your own dining gems in Zhujiajiao. Find a calm spot along the Bund. Reflect at the Jade Buddha Temple. There are numerous ways to plan your own adventure."
+    },
+    {   "location_name": "Singapore",
+        "lat": 1.352083,
+        "long": 103.819839,
+        "desc": "Singapore is unique in that it's a melting pot of Asian cultures. This fusion has led to prosperity that takes form in the city's colorful neighborhoods, eclectic culinary scene and overall modernity."
+    },
+    {   "location_name": "Salzburg",
+        "lat": 47.800500,
+        "long": 13.044410,
+        "desc": "If you like the idea of beautiful castles, cathedrals and other Baroque buildings covered in snow, one look at Salzburg, Austria, might be enough to lure you in. "
+    },
+    {   "location_name": "Düsseldorf",
+        "lat": 51.224960,
+        "long": 6.775670,
+        "desc": "Düsseldorf houses “the longest bar in the world,” Germany’s finest shopping boulevard Königsallee, and countless museums, theatres and attractions underscoring the city as a major arts center."
+    },
+    {   "location_name": "Venice",
+        "lat": 45.440845,
+        "long": 12.315515,
+        "desc": "There are few destinations in the world quite like Venice. Its uniqueness can largely be attributed to the canals that run through the city like roads, carrying water taxis and buses in addition to its fleet of famous gondolas."
+    },
+    {   "location_name": "Stockholm",
+        "lat": 59.329323,
+        "long": 18.068581,
+        "desc": "Stockholm's charming cobblestone-lined Old Town features a number of top attractions, such as the Royal Palace and the Nobel Prize Museum."
+    },
+    {   "location_name": "Swiss Alps",
+        "lat": 46.887619,
+        "long": 9.657000,
+        "desc": "While skiing, hiking and snowboarding tend to dominate this region, you'll also discover quaint towns, serene lakes and gorgeous scenery."
+    },
+    {   "location_name": "Prague",
+        "lat": 50.075539,
+        "long": 14.437800,
+        "desc": "A vacation in Prague will leave you feeling as if you've stepped into a fairy tale."
+    },
+    {   "location_name": "Athens",
+        "lat": 37.983810,
+        "long": 23.727539,
+        "desc": "Athens was made for history buffs and architecture aficionados thanks to it housing the world-renowned Acropolis and Ancient Agora."
+    },
+    {   "location_name": "Cyprus",
+        "lat": 35.126411,
+        "long": 33.429859,
+        "desc": "Take a dip at one of Cyprus' many beaches or in the Adonis Baths, rumored to be a favorite spot among Greek gods."
+    },
+    {   "location_name": "Budapest",
+        "lat": 47.497913,
+        "long": 19.040236,
+        "desc": "The capital of Hungary is filled with an assortment of monuments, museums and religious sites."
+    },
+    {   "location_name": "Copenhagen",
+        "lat": 55.676098,
+        "long": 12.568337,
+        "desc": "Copenhagen is full of everything from top-notch art and history museums to incredible castles and palaces for visitors to explore."
     }
 ]
