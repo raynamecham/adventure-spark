@@ -1,5 +1,4 @@
 // Remove adventure from list
-
 function deleteAdventure(button) {
     let adventureId = button.getAttribute('data-adventure-id');
     console.log(adventureId);
@@ -17,22 +16,30 @@ function deleteAdventure(button) {
 }
 
 // Moves checked item to "Adventures I've Had" list
+function updateAdventure(checkbox) {
+    let adventureId = checkbox.getAttribute('data-adventure-id');
+    let visited = checkbox.getAttribute('data-visited');
+    let oppositeVisited;
 
-function visitedAdventure() {
-    let checkBox = document.getElementById("visit-adventure");
+    if (visited == "False") {
+        oppositeVisited = "True";
+    }
+    else {
+        oppositeVisited = "False";
+    }
 
-    if (checkBox.checked == true) {
-        $.get({
-            url: '/api/visit_adventure',
-            data: {visited: checkBox},
-            success: function(){
-                console.log('visitedAdventure returned success code.');
-            },
-            error: function(){
-                console.log('visitedAdventure returned failure code.');
-            }
-        });
-    } else {
-        console.log ('checkbox is unchecked');
-    };
+    $.post({
+        url: '/api/update_adventure',
+        data: {
+            "adventure_id": adventureId,
+            "visited": oppositeVisited
+        },
+        success: function(){
+            console.log('updateAdventure returned success code.');
+            location.reload();
+        },
+        error: function(){
+            console.log('updateAdventure returned failure code.');
+        }
+    });
 }

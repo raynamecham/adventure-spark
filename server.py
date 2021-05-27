@@ -171,18 +171,20 @@ def delete_adventure():
 
     return 'success'
 
-@app.route('/api/visit_adventure', methods=["GET"])
-def visit_adventure():
+@app.route('/api/update_adventure', methods=["POST"])
+def update_adventure():
     """Updates user's visited list locations to True"""
 
-    visit = request.form.get('visited')
+    adventure_id = request.form.get('adventure_id')
+    visited = request.form.get('visited')
 
     if 'user_id' not in session:
         abort(500)
     
-    crud.visit_adventure(visit)
+    result = crud.update_adventure(adventure_id, visited)
+    print(result)
 
-    return 'success'
+    return 'successy'
 
 
 if __name__ == "__main__":

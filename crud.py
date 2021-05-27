@@ -98,15 +98,19 @@ def delete_adventure(adventure_id):
     db.session.delete(adventure)
     db.session.commit()
 
-def visit_adventure(visited):
+def update_adventure(adventure_id, visited):
     """Update adventure visited info"""
 
-    visit = Adventure.query.get(visited)
-    visited = True
+    # Convert string to bool
+    if visited == "False":
+        visited = False
+    else:
+        visited = True
 
-    db.session.update(visit)
+    result = Adventure.query.filter(Adventure.adventure_id == adventure_id).update({Adventure.visited: visited})
     db.session.commit()
-
+    return result
+    
 # YouTubeCache functions
 
 def create_youtube_record(video_id, video_title, location_id):
