@@ -39,7 +39,7 @@
                             <label class="list-group-item">
                                 <input class="form-check-input adventure-list-item" type="checkbox" onchange="updateAdventure(this)" data-adventure-id="{{ adventure.adventure_id }}" data-visited="{{ adventure.visited }}">
                                     <span>{{ location.location_name }}</span>
-                                    <button class="btn btn-primary btn-sm ml-4 px-1" onclick="deleteAdventure(this)" data-adventure-id="{{ adventure.adventure_id }}">Remove Adventure</button>
+                                    <i class="bi bi-trash-fill ml-2" onclick="deleteAdventure(this)" data-adventure-id="{{ adventure.adventure_id }}" title="Remove Adventure" role="button"></i>
                             </label>
 
                             {% endif %}
@@ -64,7 +64,7 @@
                             <label class="list-group-item">
                                 <input class="form-check-input adventure-list-item" type="checkbox" onchange="updateAdventure(this)" data-adventure-id="{{ adventure.adventure_id }}" data-visited="{{ adventure.visited }}" checked="checked">
                                     <span>{{ location.location_name }}</span>
-                                    <button class="btn btn-primary btn-sm ml-4 px-1" onclick="deleteAdventure(this)" data-adventure-id="{{ adventure.adventure_id }}" title="Remove Adventure">Remove Adventure</button>
+                                    <i class="bi bi-trash-fill ml-2" onclick="deleteAdventure(this)" data-adventure-id="{{ adventure.adventure_id }}" title="Remove Adventure" role="button"></i>
                             </label>
 
                             {% endif %}
