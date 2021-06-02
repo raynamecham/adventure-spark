@@ -1,5 +1,7 @@
 "use strict";
 
+// Add to list from map info window
+
 function addToList(button){
   let locationId = button.getAttribute('data-location-id');
   console.log(locationId);
@@ -17,7 +19,7 @@ function addToList(button){
   });  
 };
 
-//Google Map functions
+// Google Map functions
 
 function initMap() {
   const map = new google.maps.Map(document.getElementById("map"), {
@@ -36,7 +38,7 @@ function initMap() {
 
   $.get('/api/locations', (locations) => {
     for (const location of locations) {
-      // Define the content of the infoWindow
+      // InfoWindow content
       const locationInfoContent = `
         <div class="window-content">
           <div class="location-thumbnail">
@@ -56,6 +58,7 @@ function initMap() {
         </div>
       `;
 
+      // Map marker info
       const locationMarker = new google.maps.Marker({
         position: {
           lat: location.latitude,

@@ -1,4 +1,7 @@
+"use strict";
+
 // Remove adventure from list
+
 function deleteAdventure(button) {
     let adventureId = button.getAttribute('data-adventure-id');
     console.log(adventureId);
@@ -15,7 +18,8 @@ function deleteAdventure(button) {
     });
 }
 
-// Moves checked item to "Adventures I've Had" list
+// Move adventures between visited and not visited
+
 function updateAdventure(checkbox) {
     let adventureId = checkbox.getAttribute('data-adventure-id');
     let visited = checkbox.getAttribute('data-visited');

@@ -1,3 +1,5 @@
+"use strict";
+
 // Youtube functions
 
 function getVideo(locationName, locationId) {
@@ -53,6 +55,8 @@ function getVideo(locationName, locationId) {
         }
     });
 }
+
+// Embed videos on page
 
 function embedVideo(data, locationName) {
     // update videos-heading
