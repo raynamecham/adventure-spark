@@ -1,6 +1,7 @@
 # """CRUD operations."""
 
 from flask.globals import session
+from werkzeug.security import generate_password_hash, check_password_hash
 from model import db, User, Location, Adventure, YouTubeCache, connect_to_db
 from datetime import datetime, timedelta
 
@@ -9,7 +10,8 @@ from datetime import datetime, timedelta
 def create_user(name, email, password):
     """Create and return a new user."""
 
-    user = User(name=name, email=email, password=password)
+    hashed_pw = generate_password_hash(password)
+    user = User(name=name, email=email, password=hashed_pw)
 
     db.session.add(user)
     db.session.commit()

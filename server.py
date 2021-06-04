@@ -2,6 +2,7 @@
 
 from jinja2 import StrictUndefined
 from flask import Flask, render_template, request, redirect, jsonify, session, abort
+from werkzeug.security import generate_password_hash, check_password_hash
 
 
 from model import connect_to_db, db, User, Location, Adventure
