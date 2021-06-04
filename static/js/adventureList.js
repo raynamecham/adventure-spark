@@ -10,7 +10,7 @@ function deleteAdventure(button) {
         data: {adventure_id: adventureId},
         success: function(){
             console.log('deleteAdventure returned success code.');
-            window.location.href = "/adventure_list";
+            location.reload();
         },
         error: function(){
             console.log('deleteAdventure returned failure code.');

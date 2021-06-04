@@ -49,10 +49,10 @@ function initMap() {
           </div>
 
           <div class="location-information">
-            <h4>${location.name}</h4>
+            <h5>${location.name}</h5>
             <p>${location.description}</p>
             <div class="d-flex justify-content-center">
-              <button type="button" class="btn btn-primary btn-sm px-3" data-location-id="${location.id}" onclick="addToList(this)">Add To List</button>
+              <button type="button" class="btn btn-primary btn-sm mb-2" data-location-id="${location.id}" onclick="addToList(this)">Add To List</button>
             </div>
           </div>
         </div>
