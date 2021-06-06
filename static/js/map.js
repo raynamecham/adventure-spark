@@ -66,7 +66,7 @@ function initMap() {
       placeId: place.place_id,
       location: place.geometry.location,
     });
-    marker.setVisible(true);
+    marker.setVisible(false);
     infowindowContent.children.namedItem("place-name").textContent = place.name;
     infowindowContent.children.namedItem("place-id").textContent =
       place.place_id;

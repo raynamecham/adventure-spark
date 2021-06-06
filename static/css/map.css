@@ -45,17 +45,5 @@ div.window-content {
 }
 
 .controls:focus {
-  border-color: #4d90fe;
-}
-
-.title {
-  font-weight: bold;
-}
-
-#infowindow-content {
-  display: none;
-}
-
-#map #infowindow-content {
-  display: inline;
+  border-color: #86a7b7;
 }
