@@ -7,8 +7,8 @@
     },
     {
         "location_name": "Paris", 
-        "lat": 48.8620605,
-        "long": 2.2958039,
+        "lat": 48.856613,
+        "long": 2.352222,
         "desc": "The City of Light draws millions of visitors every year with its unforgettable ambiance."
     },
     {
@@ -169,8 +169,8 @@
         "desc": "Burrowed beside long-dormant volcanoes and reigning over green moorlands, Edinburgh (or Ed-n-bruh in Scots speech) is known for more than its staggering landscape."
     },
     {   "location_name": "Maldives",
-        "lat": 1.924992,
-        "long": 73.399658,
+        "lat": -0.616596,
+        "long": 73.093135,
         "desc": "It is not cheap or easy to reach, but this isolated paradise between the Arabian and Laccadive seas is the personification of a dreamy tropical vacation."
     },
     {   "location_name": "Cancun",
@@ -312,5 +312,20 @@
         "lat": 55.676098,
         "long": 12.568337,
         "desc": "Copenhagen is full of everything from top-notch art and history museums to incredible castles and palaces for visitors to explore."
+    },
+    {   "location_name": "Prince Edward Island",
+        "lat": 46.510712,
+        "long": -63.416813,
+        "desc": "Home to rolling green hills, red sandstone cliffs and a delicious bounty of seafood, this is the place to travel for a relaxing respite from Canada's more adventure-driven destinations."
+    },
+    {   "location_name": "Bangkok",
+        "lat": 13.756331,
+        "long": 100.501762,
+        "desc": "Bangkok boasts everything from flashy high-end malls to very affordable mass markets. You're also bound to discover a number of streets with shopkeepers selling specialized goods."
+    },
+    {   "location_name": "Cairo",
+        "lat": 30.044420,
+        "long": 31.235712,
+        "desc": "Take some time to relax over a cup of tea, to wander the ancient streets and to watch the sun lower over the mighty Nile River. It won't take long for the city's treasures to reveal themselves."
     }
 ]
