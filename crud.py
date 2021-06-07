@@ -10,8 +10,8 @@ from datetime import datetime, timedelta
 def create_user(name, email, password):
     """Create and return a new user."""
 
-    hashed_pw = generate_password_hash(password)
-    user = User(name=name, email=email, password=hashed_pw)
+    # hashed_pw = generate_password_hash(password)
+    user = User(name=name, email=email, password=password)
 
     db.session.add(user)
     db.session.commit()

@@ -11,7 +11,7 @@ os.system('createdb adventurespark')
 model.connect_to_db(server.app)
 model.db.create_all()
 
-crud.create_user('admin', 'admin@admin.com', 'admin')
+crud.create_user('admin', 'admin@admin.com', 'password')
 
 with open('data/locations.json') as f:
     location_data = json.loads(f.read())
