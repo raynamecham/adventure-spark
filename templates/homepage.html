@@ -33,16 +33,16 @@
       {% else %}
 
       <div class="nav-item dropdown">
-        <a href="/login" data-toggle="dropdown" class="nav-link dropdown-toggle">Log In</a>
+        <a href="/login" data-toggle="dropdown" id="login" class="nav-link dropdown-toggle">Log In</a>
           <div class="dropdown-menu action-form">
           <form action="/login" method="POST">
             <div class="form-group">
-              <input type="text" name="email" class="form-control" placeholder="Email" required="required">
+              <input id="login-email" type="text" name="email" class="form-control" placeholder="Email" required="required">
             </div>
             <div class="form-group">
-              <input type="password" name="password" class="form-control" placeholder="Password" required="required">
+              <input id="login-password" type="password" name="password" class="form-control" placeholder="Password" required="required">
             </div>
-              <input type="submit" class="btn btn-primary btn-block" value="Login">
+              <input id="login-submit" type="submit" class="btn btn-primary btn-block" value="Login">
           </form>
           </div>
       </div>
