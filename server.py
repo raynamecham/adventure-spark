@@ -3,6 +3,7 @@
 from jinja2 import StrictUndefined
 from flask import Flask, render_template, request, redirect, jsonify, session, abort
 from werkzeug.security import generate_password_hash, check_password_hash
+import folium
 
 
 from model import connect_to_db, db, User, Location, Adventure
@@ -139,11 +140,11 @@ def youtube_cache():
 
 @app.route('/adventure_list')
 def view_adventures():
-    """View user's list of adventures. """
+    """View user's list of adventures, list and map."""
 
     adventures = crud.get_adventures(session['user_id'])
 
-    return render_template('adventure_list.html', adventures=adventures)
+    return render_template('adventure_list.html', adventures=adventures, map=map)
 
 
 @app.route('/api/add_to_list', methods=["POST"])
@@ -185,7 +186,7 @@ def update_adventure():
     result = crud.update_adventure(adventure_id, visited)
     print(result)
 
-    return 'successy'
+    return 'success'
 
 
 if __name__ == "__main__":

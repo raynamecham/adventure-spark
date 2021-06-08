@@ -116,4 +116,14 @@ body {
 		display: inline-block;
 }
 
+.bg-overlay {
+    background: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)), url('/static/img/map-with-pins.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: auto;
+	width: auto;
+	padding-bottom: 300px;
+}
+
 
