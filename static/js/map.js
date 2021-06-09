@@ -25,7 +25,7 @@ function initMap() {
   const map = new google.maps.Map(document.getElementById("map"), {
     mapId: "40d6a623f18f9a8e",
     center: { lat: 51.507351, lng: -0.127758 },
-    zoom: 5,
+    zoom: 3.5,
     scrollwheel: true,
     zoomControl: true,
     panControl: false,
@@ -38,8 +38,6 @@ function initMap() {
   const input = document.getElementById("pac-input");
   const autocomplete = new google.maps.places.Autocomplete(input);
   autocomplete.bindTo("bounds", map);
-  // Specify just the place data fields that you need.
-  autocomplete.setFields(["place_id", "geometry", "name"]);
   map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
   const infowindow = new google.maps.InfoWindow();
   const infowindowContent = document.getElementById("infowindow-content");
@@ -68,12 +66,6 @@ function initMap() {
       location: place.geometry.location,
     });
     marker.setVisible(false);
-    infowindowContent.children.namedItem("place-name").textContent = place.name;
-    infowindowContent.children.namedItem("place-id").textContent =
-      place.place_id;
-    infowindowContent.children.namedItem("place-address").textContent =
-      place.formatted_address;
-    infowindow.open(map, marker);
   });
 
   // Custom info window
@@ -95,7 +87,7 @@ function initMap() {
             <h5>${location.name}</h5>
             <p>${location.description}</p>
             <div class="d-flex justify-content-center">
-              <button type="button" class="btn btn-primary btn-sm mb-2" data-location-id="${location.id}" onclick="addToList(this)">Add To List</button>
+              <button type="button" class="btn btn-primary btn-sm mb-2 no-focus" data-location-id="${location.id}" onclick="addToList(this)">Add To List</button>
             </div>
           </div>
         </div>

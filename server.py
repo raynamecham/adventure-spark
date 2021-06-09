@@ -2,8 +2,7 @@
 
 from jinja2 import StrictUndefined
 from flask import Flask, render_template, request, redirect, jsonify, session, abort
-from werkzeug.security import generate_password_hash, check_password_hash
-import folium
+from flask_bcrypt import Bcrypt
 
 
 from model import connect_to_db, db, User, Location, Adventure
@@ -11,6 +10,7 @@ import crud
 import json
 
 app = Flask(__name__)
+bcrypt = Bcrypt(app)
 app.config["SECRET_KEY"] = "adventurespark"
 app.jinja_env.undefined = StrictUndefined
 
@@ -36,6 +36,9 @@ def signup():
     name = request.form.get('name')
     email = request.form.get('email')
     password = request.form.get('password')
+
+    # hashed = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt())
+
 
     user = crud.get_user('email', email)
     session['alert']['type'] = 'danger'

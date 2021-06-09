@@ -1,7 +1,6 @@
 # """CRUD operations."""
 
 from flask.globals import session
-from werkzeug.security import generate_password_hash, check_password_hash
 from model import db, User, Location, Adventure, YouTubeCache, connect_to_db
 from datetime import datetime, timedelta
 

@@ -2,7 +2,7 @@ body {
 	font-family: 'Questrial', sans-serif;
 }
 
-/* page header photo*/
+/* Page Header Photo*/
 
 .page-header img{
 	max-width: 100%;
@@ -16,15 +16,18 @@ body {
 	font-weight: normal;
 	font-size: 13px;
 }
+
 .navbar {
 	padding-left: 16px;
 	padding-right: 16px;
 	border-bottom: 1px solid #fff;
 	border-radius: 0;
 }
+
 .navbar-custom {
 	background-color: #fff8f3;
 }
+
 .nav-link img {
 	border-radius: 50%;
 	width: 36px;
@@ -33,22 +36,27 @@ body {
 	float: left;
 	margin-right: 10px;
 }
+
 .navbar .navbar-brand {
 	padding-left: 0;
 	font-size: 20px;
 	padding-right: 50px;
 }
+
 .navbar .navbar-brand b {
 	color: #86a7b7;		
 }
+
 .navbar a {
 	color: #888;
 	font-size: 15px;
 }
+
 .navbar .sign-up-btn {
 	min-width: 110px;
 	max-height: 36px;
 }
+
 .navbar .dropdown-menu {
 	color: #999;
 	font-weight: normal;
@@ -56,15 +64,18 @@ body {
 	border-color: #e5e5e5;
 	box-shadow: 0 2px 8px rgba(0,0,0,.05);
 }
+
 .navbar a, .navbar a:active {
 	color: #888;
 	padding: 8px 20px;
 	background: transparent;
 	line-height: normal;
 }
+
 .navbar .navbar-form {
 	border: none;
 }
+
 .navbar .action-form {
 	width: 280px;
 	padding: 20px;
@@ -72,16 +83,35 @@ body {
 	right: 0;
 	font-size: 14px;
 }
+
 .navbar .action-form a {		
 	color: #86a7b7;
 	padding: 0 !important;
 	font-size: 14px;
 }
+
 .navbar .action-form .hint-text {
     text-align: center;
     margin-bottom: 15px;
     font-size: 13px;
 }
+
+.navbar .action-buttons .dropdown-toggle::after {
+	display: none;
+}
+
+@media only screen and (min-width: 960px) {
+	.navbar {
+		flex-direction: column;
+	}
+}
+
+	.navbar .nav-item {
+    padding: 0.5em 1em;
+}
+
+/* Buttons  */
+
 .btn-primary, .btn-primary:active {
 	color: #fff !important;
 	background: #588091 !important;
@@ -93,27 +123,25 @@ body {
 	background: #86a7b7 !important;
 }
 
-.navbar .action-buttons .dropdown-toggle::after {
-	display: none;
+button.no-focus, button.no-focus:focus {
+	background: #588091 !important;
+	border: none !important;
+	outline: none !important;
+	box-shadow: none !important;
+}
+
+button.no-focus:hover {
+	background: #86a7b7 !important;
+}
+
+/* Adventure List Page */
+
+#main-adventure-list h1 {
+		display: inline-block;
 }
 
 .adventure-list-item[type=checkbox]:checked + span{
 	text-decoration: line-through;
-}
-
-@media only screen and (min-width: 960px) {
-	.navbar {
-		flex-direction: column;
-	}
-}
-	.navbar .nav-item {
-    padding: 0.5em 1em;
-}
-
-/* adventure list page */
-
-#main-adventure-list h1 {
-		display: inline-block;
 }
 
 .bg-overlay {
