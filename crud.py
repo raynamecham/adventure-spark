@@ -1,15 +1,23 @@
 # """CRUD operations."""
 
+from flask import Flask
+from flask_bcrypt import Bcrypt
 from flask.globals import session
 from model import db, User, Location, Adventure, YouTubeCache, connect_to_db
 from datetime import datetime, timedelta
+
+app = Flask(__name__)
+bcrypt = Bcrypt(app)
 
 #User functions
 
 def create_user(name, email, password):
     """Create and return a new user."""
 
-    # hashed_pw = generate_password_hash(password)
+    pw_hash = bcrypt.generate_password_hash(password)
+
+    bcrypt.check_password_hash(pw_hash, password)
+
     user = User(name=name, email=email, password=password)
 
     db.session.add(user)

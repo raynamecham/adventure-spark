@@ -4,15 +4,15 @@ from jinja2 import StrictUndefined
 from flask import Flask, render_template, request, redirect, jsonify, session, abort
 from flask_bcrypt import Bcrypt
 
-
 from model import connect_to_db, db, User, Location, Adventure
 import crud
 import json
 
 app = Flask(__name__)
-bcrypt = Bcrypt(app)
 app.config["SECRET_KEY"] = "adventurespark"
 app.jinja_env.undefined = StrictUndefined
+
+bcrypt = Bcrypt(app)
 
 
 @app.route('/')
@@ -37,8 +37,6 @@ def signup():
     email = request.form.get('email')
     password = request.form.get('password')
 
-    # hashed = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt())
-
 
     user = crud.get_user('email', email)
     session['alert']['type'] = 'danger'
@@ -59,6 +57,7 @@ def signup():
         
         session['alert']['message'] = 'Welcome to Adventure Spark, ' + name + '!'
         session['alert']['type'] = 'success'
+        
         return render_template('homepage.html')
 
 
