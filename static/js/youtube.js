@@ -59,13 +59,20 @@ function getVideo(locationName, locationId) {
 // Embed videos on page
 
 function embedVideo(data, locationName) {
+
+
     // update videos-heading
     $('#videos-heading span.location-name').text(locationName);
     console.log('H4 Location Text Updated');
 
+    // embed videos 
     for (let i = 0; i < data.items.length; i++) {
         $('#video' + i +' iframe').attr('src', 'https://www.youtube.com/embed/' + data.items[i].id.videoId);
-        $('#video' + i +' p').text(data.items[i].snippet.title);
-        console.log('Video '+(i+1)+' updated');
+
+        let parser = new DOMParser;
+        let htmlEntitiesFixed = parser.parseFromString(data.items[i].snippet.title, "text/html").body.innerText;
+
+        $('#video' + i +' p').text(htmlEntitiesFixed);
+        // console.log('Video '+(i+1)+' updated');
     }
 }
