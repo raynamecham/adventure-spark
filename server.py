@@ -48,12 +48,12 @@ def signup():
     else:
         crud.create_user(name, email, password)
 
-        current_user = User.query.filter(User.email == email, User.password == password).first()
+        new_user = User.query.filter(User.email == email).first()
 
         session['logged_in'] = True
-        session['user_email'] = current_user.email
-        session['user_id'] = current_user.user_id
-        session['user_name'] = current_user.name
+        session['user_email'] = new_user.email
+        session['user_id'] = new_user.user_id
+        session['user_name'] = new_user.name
         
         session['alert']['message'] = 'Welcome to Adventure Spark, ' + name + '!'
         session['alert']['type'] = 'success'
@@ -68,9 +68,10 @@ def login():
     email = request.form.get('email')
     password = request.form.get('password')
 
-    current_user = User.query.filter(User.email == email, User.password == password).first()
+    potential_user = User.query.filter(User.email == email).first()
+    password_is_correct = bcrypt.check_password_hash(potential_user.password, password)
 
-    if not current_user:
+    if not password_is_correct:
         session['alert']['message'] = 'Email or password is incorrect.'
         session['alert']['type'] = 'danger'
         return render_template('homepage.html')
@@ -78,9 +79,9 @@ def login():
     else:
         session['logged_in'] = True
         session['alert']['type'] = None
-        session['user_email'] = current_user.email
-        session['user_id'] = current_user.user_id
-        session['user_name'] = current_user.name
+        session['user_email'] = potential_user.email
+        session['user_id'] = potential_user.user_id
+        session['user_name'] = potential_user.name
 
         return redirect('/')
 

@@ -3,6 +3,8 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
+from flask_bcrypt import Bcrypt
+
 
 db = SQLAlchemy()
 
@@ -19,8 +21,9 @@ class User(db.Model):
     email= db.Column(db.String, unique=True, nullable=False)
     password= db.Column(db.String(128), nullable=False)
 
+
     def __repr__(self):
-        return f'<Name name={self.name} Email email={self.email} ID user_id={self.user_id}>'
+        return f'<Name name={self.name} Email email={self.email} ID user_id={self.user_id} Password password={self.password}>'
 
 
 class Location(db.Model):

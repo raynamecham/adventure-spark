@@ -14,9 +14,7 @@ bcrypt = Bcrypt(app)
 def create_user(name, email, password):
     """Create and return a new user."""
 
-    pw_hash = bcrypt.generate_password_hash(password)
-
-    bcrypt.check_password_hash(pw_hash, password)
+    password = bcrypt.generate_password_hash(password).decode('utf-8')
 
     user = User(name=name, email=email, password=password)
 
@@ -33,7 +31,7 @@ def get_user(param_type, param):
 
     if (param_type == "email"):
         return User.query.filter(User.email == param).first()
-    elif (param_type == "id"):
+    elif (param_type == "user_id"):
         return User.query.get(param)
 
 def delete_user(user_id):
