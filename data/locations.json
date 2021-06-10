@@ -1,9 +1,9 @@
 [
     {
-        "location_name": "South Island, New Zealand",
-        "lat": -40.923859,
-        "long": 173.991425,
-        "desc": "New Zealand's South Island brims with majestic landscapes at every turn, from dramatic mountains to fjords to glaciers."
+        "location_name": "Wellington",
+        "lat": -41.286461,
+        "long": 174.776230,
+        "desc": " It's no wonder why fantasy films like The Lord of the Rings and The Hobbit trilogies were filmed here, where gorgeous settings can be found at every turn. "
     },
     {
         "location_name": "Paris", 
@@ -166,7 +166,7 @@
     {   "location_name": "Edinburgh",
         "lat": 55.953251,
         "long": -3.188267,
-        "desc": "Burrowed beside long-dormant volcanoes and reigning over green moorlands, Edinburgh (or Ed-n-bruh in Scots speech) is known for more than its staggering landscape."
+        "desc": "Burrowed beside long-dormant volcanoes and reigning over green moorlands, Edinburg is known for more than its staggering landscape."
     },
     {   "location_name": "Maldives",
         "lat": -0.616596,
@@ -327,5 +327,40 @@
         "lat": 30.044420,
         "long": 31.235712,
         "desc": "Take some time to relax over a cup of tea, to wander the ancient streets and to watch the sun lower over the mighty Nile River. It won't take long for the city's treasures to reveal themselves."
+    },
+    {   "location_name": "Malta",
+        "lat": 35.937496,
+        "long": 14.375416,
+        "desc": "With so many rich and colourful traditions which have withstood the test of time, the amount of pride the Maltese have for their culture is highly understandable. With elaborate fireworks displays, rowdy village festas, and outstanding hospitality, not to mention the mind-blowingly delicious food."
+    },
+    {   "location_name": "St. Petersburg",
+        "lat": 59.934280,
+        "long": 30.335098,
+        "desc": "An epicenter of distinctly Russian culture, as the place where literature and music greats like Dostoyevsky, Tchaikovsky and Prokofiev all found their voice."
+    },
+    {   "location_name": "Alice Springs",
+        "lat": -23.700680,
+        "long": 133.880710,
+        "desc": "The number one destination in Outback Austalia. Make Alice Springs your base for exploring the Outback!"
+    },
+    {   "location_name": "Jaipur",
+        "lat": 26.912434,
+        "long": 75.787270,
+        "desc": "Travel to Rajasthan's capital to marvel at incredible architecture. Jaipur's biggest claim to fame is spellbinding Hawa Mahal, a pink palace that was modeled after Krishna's crown and features an astounding 953 windows."
+    },
+    {   "location_name": "Nepal",
+        "lat": 28.394857,
+        "long": 84.124008,
+        "desc": "Nepal is home to seven of the world’s highest peaks. These peaks are all over 20,000 feet and seeing them in person is an incredible experience."
+    },
+    {   "location_name": "Gorkhi-Terelj National Park",
+        "lat": 47.888432,
+        "long": 107.422822,
+        "desc": "A natural treasure and outdoor adventurers’ paradise. Its stark, sweeping landscape and numerous natural attractions draw tourists from all over the world who want to explore the unspoiled land, often on horseback or camels."
+    },
+    {   "location_name": "Tanzania",
+        "lat": -6.369028,
+        "long": 34.888821,
+        "desc": "Tanzania boasts otherworldly natural wonders, including red-hued Lake Natron, Ngorongoro Conservation Area's expansive crater and Mount Kilimanjaro, the tallest mountain in Africa."
     }
 ]
