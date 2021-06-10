@@ -7,13 +7,13 @@ function getVideo(locationName, locationId) {
         url: '/api/youtube_cache',
         data: {location_id: locationId},
         success: function(getCacheData){
-            console.log("YouTube_Cache GET Request Succeeded");
+            // console.log("YouTube_Cache GET Request Succeeded");
             if (getCacheData.items.length === 3) {
-                console.log("YouTube_Cache Found Three Videos");
+                // console.log("YouTube_Cache Found Three Videos");
                 embedVideo(getCacheData, locationName);
             }
             else {
-                console.log("YouTube_Cache Did NOT Find Three Videos");
+                // console.log("YouTube_Cache Did NOT Find Three Videos");
                 $.get({
                     url: 'https://www.googleapis.com/youtube/v3/search',
                     data: {
@@ -25,7 +25,7 @@ function getVideo(locationName, locationId) {
                         videoEmbeddable: true
                     },
                     success: function(youTubeData){
-                        console.log("YouTube Search Request Succeeded");
+                        // console.log("YouTube Search Request Succeeded");
                         $.post({
                             url: '/api/youtube_cache',
                             data: {
@@ -33,40 +33,38 @@ function getVideo(locationName, locationId) {
                                 location_id: locationId
                             },
                             success: function(){
-                                console.log("YouTube_Cache POST Request Succeeded");
+                                // console.log("YouTube_Cache POST Request Succeeded");
                                 embedVideo(youTubeData, locationName)
                             },
                             error: function(response){
-                                console.log("YouTube_Cache POST Request Failed");
-                                console.log(response);
+                                // console.log("YouTube_Cache POST Request Failed");
+                                // console.log(response);
                             }
                         });
                     },
                     error: function(response){
-                        console.log("YouTube Search Request Failed");
-                        console.log(response);
+                        // console.log("YouTube Search Request Failed");
+                        // console.log(response);
                     }
                 });
             }
         },
         error: function(response){
-            console.log("YouTube_Cache GET Request Failed");
-            console.log(response);
+            // console.log("YouTube_Cache GET Request Failed");
+            // console.log(response);
         }
     });
 }
 
 // Embed videos on page
-
 function embedVideo(data, locationName) {
 
 
     // update videos-heading
     $('#videos-heading span.location-name').text(locationName);
-    console.log('H4 Location Text Updated');
+    // console.log('H4 Location Text Updated');
 
-    // embed videos 
-    for (let i = 0; i < data.items.length; i++) {
+        for (let i = 0; i < data.items.length; i++) {
         $('#video' + i +' iframe').attr('src', 'https://www.youtube.com/embed/' + data.items[i].id.videoId);
 
         let parser = new DOMParser;

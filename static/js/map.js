@@ -1,7 +1,6 @@
 "use strict";
 
 // Add to list from map info window
-
 function addToList(button){
   let locationId = button.getAttribute('data-location-id');
   console.log(locationId);
@@ -19,8 +18,7 @@ function addToList(button){
   });  
 };
 
-// Google Map function
-
+// Google Map
 function initMap() {
   const map = new google.maps.Map(document.getElementById("map"), {
     mapId: "40d6a623f18f9a8e",
