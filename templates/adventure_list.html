@@ -16,64 +16,68 @@
 <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
     <ul class="navbar-nav mx-auto"> 		
         <div class="navbar-nav ml-auto action-buttons">
-        <div class="nav-item">
-            <a href="/home" class="nav-link mr-4">Home</a>
-        </div>
+            <div class="nav-item">
+                <a href="/" class="nav-link mr-4">Back to Map</a>
+            </div>
+        
+            <div class="nav-item">
+                <a href="/logout" class="btn btn-primary btn-sm">Log Out</a>
+            </div>
         </div>
     </ul>
 </nav>
 
 <div class="container mt-4 mb-4">
     <div class="mt-4 mb-4" id="main-adventure-list">
-        <h1>My list of adventures:</h1><a href ="/home"><button class="btn btn-primary btn-sm ml-3 px-3">Back to Map</button></a>
+        <h1>My Adventure List</h1>
     </div>
     <h5 class="mb-4">Keep track of places you'd like to visit, and check them off your list when you have visited them.</h5>
     <div class="row bg-overlay">
         <div class="col-lg-7">
-            <div class="card mt-4">
+            <div class="card mt-4 adventure-list-card">
                 <div class="card-body">
                     <h3 class="card-title">Adventures I want to have:</h3>                
                     <div class="card-text">
-                        {% for adventure, location in adventures %}
-                        <ul id="adventure-list" class="list-group list-group-flush">
-                            {% if adventure.visited == False %}
-                            
-                            <label class="list-group-item">
-                                <input class="form-check-input adventure-list-item" type="checkbox" onchange="updateAdventure(this)" data-adventure-id="{{ adventure.adventure_id }}" data-visited="{{ adventure.visited }}">
-                                    <span>{{ location.location_name }}</span>
-                                    <i class="bi bi-trash-fill ml-2" onclick="deleteAdventure(this)" data-adventure-id="{{ adventure.adventure_id }}" title="Remove Adventure" role="button"></i>
-                            </label>
-
+                        <ul class="list-group list-group-flush">
+                            {% if not adventures %}
+                            <a href="/"><button class="btn btn-primary btn-sm">Find an Adventure!</button></a>
+                            {% else %}
+                            {% for adventure, location in adventures %}
+                                {% if adventure.visited == False %}                                
+                                <li>
+                                    <label class="list-group-item">
+                                        <input class="form-check-input adventure-list-item" type="checkbox" onchange="updateAdventure(this)" data-adventure-id="{{ adventure.adventure_id }}" data-visited="{{ adventure.visited }}">
+                                            <span>{{ location.location_name }}</span>
+                                            <i class="bi bi-trash-fill ml-2" onclick="deleteAdventure(this)" data-adventure-id="{{ adventure.adventure_id }}" title="Remove Adventure" role="button"></i>
+                                    </label>
+                                </li>
+                                {% endif %}
+                            {% endfor %}
                             {% endif %}
-
                         </ul>
-
-                        {% endfor %}
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="col-lg-5">
-            <div class="card mt-4">
+            <div class="card mt-4 adventure-list-card">
                 <div class="card-body">
                     <h3 class="card-title">Adventures I've had:</h3>                
                     <div class="card-text">
+                        <ul class="list-group list-group-flush">
                         {% for adventure, location in adventures %}
-                        <ul id="adventure-list" class="list-group list-group-flush">
                             {% if adventure.visited == True %}
-                            
-                            <label class="list-group-item">
-                                <input class="form-check-input adventure-list-item" type="checkbox" onchange="updateAdventure(this)" data-adventure-id="{{ adventure.adventure_id }}" data-visited="{{ adventure.visited }}" checked="checked">
-                                    <span>{{ location.location_name }}</span>
-                                    <i class="bi bi-trash-fill ml-2" onclick="deleteAdventure(this)" data-adventure-id="{{ adventure.adventure_id }}" title="Remove Adventure" role="button"></i>
-                            </label>
-
+                            <li>
+                                <label class="list-group-item">
+                                    <input class="form-check-input adventure-list-item" type="checkbox" onchange="updateAdventure(this)" data-adventure-id="{{ adventure.adventure_id }}" data-visited="{{ adventure.visited }}" checked="checked">
+                                        <span>{{ location.location_name }}</span>
+                                        <i class="bi bi-trash-fill ml-2" onclick="deleteAdventure(this)" data-adventure-id="{{ adventure.adventure_id }}" title="Remove Adventure" role="button"></i>
+                                </label>
+                            </li>
                             {% endif %}
-
-                        </ul>
-
                         {% endfor %}
+                        </ul>                        
                     </div>
                 </div>
             </div>

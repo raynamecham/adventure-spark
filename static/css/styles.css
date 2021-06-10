@@ -144,6 +144,19 @@ button.no-focus:hover {
 	text-decoration: line-through;
 }
 
+.adventure-list-card {
+	background-color: rgba(255,255,255,.75);
+}
+
+.adventure-list-card ul {
+	list-style-type: none;
+}
+
+.adventure-list-card .list-group-item {
+	background-color: transparent;
+	border: none;
+}
+
 .bg-overlay {
     background: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)), url('/static/img/map-with-pins.jpg');
     background-repeat: no-repeat;
