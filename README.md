@@ -3,8 +3,6 @@
 >"So much of who we are is where we have been."
 -William Langewiesche
 
-### Spark your next travel idea!
-
 
 
 [![Python Versions](https://img.shields.io/pypi/pyversions/yt2mp3.svg)](https://pypi.python.org/pypi/yt2mp3/)
