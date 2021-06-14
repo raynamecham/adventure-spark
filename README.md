@@ -15,7 +15,7 @@
     - [Technologies](#technologies)
     - [Installation](#installation)
     - [Roadmap](#roadmap)
-    - [About](#about)
+    - [About the developer](#about-the-developer)
 
 ### Overview
 <a name="Overview"></a>
@@ -25,6 +25,7 @@ I wanted to be able to utilize two APIs in a very unique way. Adventure Spark do
 Check out the live site at https://adventure-spark.fun
 
 ***Any user can see the world map and location markers.***
+
 ![](/demo/adventurespark1.gif)
 
 ***They can click on a marker and the videos about that location will auto populate.***
@@ -34,6 +35,7 @@ Check out the live site at https://adventure-spark.fun
 ***To add an adventure to your list, you must sign up and log in.***
 
 ![](/demo/adventurespark3.gif)
+
 ![](/demo/adventurespark4.gif)
 
 ***Logged in users can add, check off, and remove adventures from their list.***
@@ -41,12 +43,11 @@ Check out the live site at https://adventure-spark.fun
 ![](/demo/adventurespark5.gif)
 
 
-
 ### Technologies
 
 <a name="Technologies"></a>
 - Python, SQLAlchemy, PostgreSQL, Flask, Bcrypt
-- Javascript, jQuery(AJAX, JSON), Jinja2, Bootstrap, Google Fonts, HTML5, CSS3
+- Javascript, jQuery(AJAX, JSON), Jinja2, Bootstrap 4, Google Fonts, HTML5, CSS3
 - APIs: Google Maps with Places library, YouTube
 
 
@@ -71,7 +72,7 @@ Feature releases:
 - Save videos to personal adventure list to watch later
 - User uploaded photos of adventures
 
-### About
+### About the developer
 
-<a name="about"></a>
+<a name="about-the-developer"></a>
 Originally from Washington, Rayna now resides in Utah with her husband and 3 kids. She has been a stay-at-home parent while her kids were little and loves being a mom. Now that her kids are older, she is pursuing a full-time career in frontend software development. She loves reading, music, trying out new recipes, and traveling. Rayna has always prided herself on being knowledgeable with tech amongst family and friends. The last several years brought about opportunities to learn web development in a freelance format, which caused her to think this might be what she'd like to do for a career. After making several websites for clients, she decided to amp up her skills and join Hackbright! Adventure Spark is her capstone project. Find her on [LinkedIn](https://www.linkedin.com/in/raynamecham/) and on [Github](https://github.com/raynamecham).
