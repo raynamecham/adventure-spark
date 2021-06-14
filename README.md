@@ -1,6 +1,6 @@
 # Adventure Spark
 
->So much of who we are is where we have been.
+>"So much of who we are is where we have been."
 -William Langewiesche
 
 ### Spark your next travel idea!
