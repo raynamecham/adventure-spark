@@ -1,16 +1,11 @@
 # Adventure Spark
-
-## Spark your next travel idea!
+### Spark your next travel idea!
 
 [![Python Versions](https://img.shields.io/pypi/pyversions/yt2mp3.svg)](https://pypi.python.org/pypi/yt2mp3/)
-
 [![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg?style=flat)]()
 
 ## Table of Contents
 
-- [Adventure Spark](#adventure-spark)
-  - [Spark your next travel idea!](#spark-your-next-travel-idea)
-  - [Table of Contents](#table-of-contents)
     - [Overview](#overview)
     - [Technologies](#technologies)
     - [Installation](#installation)
