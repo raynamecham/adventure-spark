@@ -51,7 +51,7 @@ Check out the live site at https://adventure-spark.fun
 <a name="installation"></a>
 Tip: Create your own virtual environment to run this project.
 ***
-Run these commands to install. 
+Run these commands to install and run. 
 ```
 $ git clone https://github.com/raynamecham/adventure-spark.git
 $ source env/bin/activate
