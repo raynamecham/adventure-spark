@@ -6,7 +6,8 @@
 
 
 [![Python Versions](https://img.shields.io/pypi/pyversions/yt2mp3.svg)](https://pypi.python.org/pypi/yt2mp3/)
-[![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg?style=flat)](https://github.com/raynamecham/adventure-spark)
+[![GitHub last commit]](https://img.shields.io/github/last-commit/raynamecham/adventure-spark)
+[![Github language count]](https://img.shields.io/github/languages/count/raynamecham/adventure-spark)
 
 ## Table of Contents
 
