@@ -9,7 +9,7 @@
  1.   - [Overview](#overview)
  2.   - [Technologies](#technologies)
  3.   - [Installation](#installation)
- 4  - [Roadmap](#roadmap)
+ 4.  - [Roadmap](#roadmap)
  5.  - [About the developer](#about-the-developer)
 
 ### Overview
