@@ -6,11 +6,11 @@
 
 ## Table of Contents
 
-    - [Overview](#overview)
-    - [Technologies](#technologies)
-    - [Installation](#installation)
-    - [Roadmap](#roadmap)
-    - [About the developer](#about-the-developer)
+ 1.   - [Overview](#overview)
+ 2.   - [Technologies](#technologies)
+ 3.   - [Installation](#installation)
+ 4  - [Roadmap](#roadmap)
+ 5.  - [About the developer](#about-the-developer)
 
 ### Overview
 <a name="Overview"></a>
@@ -62,7 +62,7 @@ $ python3 server.py
 ### Roadmap
 
 <a name="Roadmap"></a>
-Feature releases:
+Future releases:
 - User will be able to add their own map marker locations
 - Save videos to personal adventure list to watch later
 - User uploaded photos of adventures
