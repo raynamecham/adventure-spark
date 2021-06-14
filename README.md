@@ -6,7 +6,7 @@
 
 
 [![Python Versions](https://img.shields.io/pypi/pyversions/yt2mp3.svg)](https://pypi.python.org/pypi/yt2mp3/)
-[![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg?style=flat)]()
+[![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg?style=flat)](https://github.com/raynamecham/adventure-spark)
 
 ## Table of Contents
 
@@ -57,7 +57,7 @@ Tip: Create your own virtual environment to run this project.
 ***
 Run these commands to install and run. 
 ```
-$ git clone https://github.com/raynamecham/adventure-spark.git
+$ git clone https://github.com/raynamecham/adventure-spark
 $ source env/bin/activate
 $ pip3 install -r requirements.txt
 $ python3 server.py
