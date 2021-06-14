@@ -1,6 +1,9 @@
 # Adventure Spark
 ### Spark your next travel idea!
 
+>So much of who we are is where we have been.
+-William Langewiesche
+
 [![Python Versions](https://img.shields.io/pypi/pyversions/yt2mp3.svg)](https://pypi.python.org/pypi/yt2mp3/)
 [![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg?style=flat)]()
 
