@@ -45,7 +45,7 @@ Check out the live site at https://adventure-spark.fun
 ### Technologies
 
 <a name="Technologies"></a>
-- Python, SQLAlchemy, PostgreSQL, Flask, Bcrypt
+- Python, SQLAlchemy, PostgreSQL, Flask, Bcrypt, Selenium
 - Javascript, jQuery(AJAX, JSON), Jinja2, Bootstrap 4, Google Fonts, HTML5, CSS3
 - APIs: Google Maps with Places library, YouTube
 
