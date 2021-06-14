@@ -1,4 +1,4 @@
-# Adventure Spark :national_park:
+# Adventure Spark 🏞️
 
 >"So much of who we are is where we have been."
 -William Langewiesche
