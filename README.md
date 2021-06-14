@@ -1,22 +1,77 @@
-Languages:
+# Adventure Spark
 
-Python 3
-JavaScript (AJAX, JSON)
-HTML
-CSS
+## Spark your next travel idea!
 
-Frameworks & Libraries:
+[![Python Versions](https://img.shields.io/pypi/pyversions/yt2mp3.svg)](https://pypi.python.org/pypi/yt2mp3/)
 
-Flask
-Jinja
-jQuery
-Bootstrap 4
+[![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg?style=flat)]()
 
-Database:
+## Table of Contents
 
-PostgreSQL / SQLAlchemy
+- [Adventure Spark](#adventure-spark)
+  - [Spark your next travel idea!](#spark-your-next-travel-idea)
+  - [Table of Contents](#table-of-contents)
+    - [Overview](#overview)
+    - [Technologies](#technologies)
+    - [Installation](#installation)
+    - [Roadmap](#roadmap)
+    - [About](#about)
 
-APIs:
+### Overview
+<a name="Overview"></a>
 
-Google Map API with Places library
-YouTube API
+I wanted to be able to utilize two APIs in a very unique way. Adventure Spark does just that! Users are able to see points of interest on a world map using the Google Maps API, scroll around the map, and click on the map markers. Clicking on the points will make a call to the YouTube API and display a list of videos of things to do in that city. Users are able to do a quick search for points on the map as well. Users can also keep a personal list of places they have visited and want to visit in the future on an adventure "bucket list".
+
+Check out the live site at https://adventure-spark.fun
+
+***Any user can see the world map and location markers.***
+![](/demo/adventurespark1.gif)
+
+***They can click on a marker and the videos about that location will auto populate.***
+
+![](/demo/adventurespark2.gif)
+
+***To add an adventure to your list, you must sign up and log in.***
+
+![](/demo/adventurespark3.gif)
+![](/demo/adventurespark4.gif)
+
+***Logged in users can add, check off, and remove adventures from their list.***
+
+![](/demo/adventurespark5.gif)
+
+
+
+### Technologies
+
+<a name="Technologies"></a>
+- Python, SQLAlchemy, PostgreSQL, Flask, Bcrypt
+- Javascript, jQuery(AJAX, JSON), Jinja2, Bootstrap, Google Fonts, HTML5, CSS3
+- APIs: Google Maps with Places library, YouTube
+
+
+### Installation
+
+<a name="installation"></a>
+Tip: Create your own virtual environment to run this project.
+***
+Run these commands to install. 
+```
+$ git clone https://github.com/raynamecham/adventure-spark.git
+$ source env/bin/activate
+$ pip3 install -r requirements.txt
+$ python3 server.py
+```
+
+### Roadmap
+
+<a name="Roadmap"></a>
+Feature releases:
+- User will be able to add their own map marker locations
+- Save videos to personal adventure list to watch later
+- User uploaded photos of adventures
+
+### About
+
+<a name="about"></a>
+Originally from Washington, Rayna now resides in Utah with her husband and 3 kids. She has been a stay-at-home parent while her kids were little and loves being a mom. Now that her kids are older, she is pursuing a full-time career in frontend software development. She loves reading, music, trying out new recipes, and traveling. Rayna has always prided herself on being knowledgeable with tech amongst family and friends. The last several years brought about opportunities to learn web development in a freelance format, which caused her to think this might be what she'd like to do for a career. After making several websites for clients, she decided to amp up her skills and join Hackbright! Adventure Spark is her capstone project. Find her on [LinkedIn](https://www.linkedin.com/in/raynamecham/) and on [Github](https://github.com/raynamecham).
