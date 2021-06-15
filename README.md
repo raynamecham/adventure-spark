@@ -18,9 +18,10 @@
 2. - [Technologies](#technologies)
 3. - [Installation](#installation)
 4. - [Roadmap](#roadmap)
-5. - [About the developer](#about-the-developer)
+5. - [About the Developer](#about-the-developer)
 
 ### Overview
+
 <a name="Overview"></a>
 ***
 
@@ -48,6 +49,7 @@ Check out the live site at https://adventure-spark.fun
 
 
 ### Technologies
+
 <a name="Technologies"></a>
 ***
 - Python, SQLAlchemy, PostgreSQL, Flask, Bcrypt, Selenium
@@ -56,6 +58,7 @@ Check out the live site at https://adventure-spark.fun
 
 
 ### Installation
+
 <a name="installation"></a>
 Tip: Create your own virtual environment to run this project.
 ***
@@ -69,6 +72,7 @@ $ python3 server.py
 ```
 
 ### Roadmap
+
 <a name="Roadmap"></a>
 ***
 
@@ -77,7 +81,8 @@ Future releases:
 - Save videos to personal adventure list to watch later
 - User uploaded photos of adventures
 
-### About the developer
+### About the Developer
+
 <a name="about-the-developer"></a>
 ***
 
