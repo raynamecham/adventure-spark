@@ -1,9 +1,10 @@
 # Adventure Spark 🏞️
 
+***
 >"So much of who we are is where we have been."
 -William Langewiesche
 
-
+***
 
 ![Python Versions](https://img.shields.io/pypi/pyversions/yt2mp3.svg)
 ![GitHub last commit](https://img.shields.io/github/last-commit/raynamecham/adventure-spark)
@@ -59,8 +60,9 @@ Tip: Create your own virtual environment to run this project.
 Run these commands to install and run. 
 ```
 $ git clone https://github.com/raynamecham/adventure-spark
-$ source env/bin/activate
+$ source env/bin/activate (activate virtualenv)
 $ pip3 install -r requirements.txt
+$ python3 seed-database.py
 $ python3 server.py
 ```
 
