@@ -21,7 +21,9 @@
 5. - [About the developer](#about-the-developer)
 
 ### Overview
+
 <a name="Overview"></a>
+***
 
 I wanted to be able to utilize two APIs in a very unique way. Adventure Spark does just that! Users are able to see points of interest on a world map using the Google Maps API, scroll around the map, and click on the map markers. Clicking on the points will make a call to the YouTube API and display a list of videos of things to do in that city. Users are able to do a quick search for points on the map as well. Users can also keep a personal list of places they have visited and want to visit in the future on an adventure "bucket list".
 
@@ -49,6 +51,7 @@ Check out the live site at https://adventure-spark.fun
 ### Technologies
 
 <a name="Technologies"></a>
+***
 - Python, SQLAlchemy, PostgreSQL, Flask, Bcrypt, Selenium
 - Javascript, jQuery(AJAX, JSON), Jinja2, Bootstrap 4, Google Fonts, HTML5, CSS3
 - APIs: Google Maps with Places library, YouTube
