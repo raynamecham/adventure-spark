@@ -78,6 +78,7 @@ $ python3 server.py
 
 Future releases:
 - User will be able to add their own map marker locations
+- User map of adventures 
 - Save videos to personal adventure list to watch later
 - User uploaded photos of adventures
 
@@ -86,4 +87,4 @@ Future releases:
 <a name="about-the-developer"></a>
 ***
 
-Originally from Washington, Rayna now resides in Utah with her husband and 3 kids. She has been a stay-at-home parent while her kids were little and loves being a mom. Now that her kids are older, she is pursuing a full-time career in frontend software development. She loves reading, music, trying out new recipes, and traveling. Rayna has always prided herself on being knowledgeable with tech amongst family and friends. The last several years brought about opportunities to learn web development in a freelance format, which caused her to think this might be what she'd like to do for a career. After making several websites for clients, she decided to amp up her skills and join Hackbright! Adventure Spark is her capstone project. Find her on [LinkedIn](https://www.linkedin.com/in/rayna-mecham/) and on [Github](https://github.com/raynamecham).
+Originally from Washington, Rayna now resides in Utah with her husband and 3 kids. She has been a stay-at-home parent while her kids were little and loves being a mom. Now that her kids are older, she is pursuing a full-time career in frontend software development. Rayna has always prided herself on being knowledgeable with tech amongst family and friends. The last several years brought about opportunities to learn web development in a freelance format, which caused her to think this might be what she'd like to do for a career. After making several basic websites for clients, she decided to amp up her skills and join Hackbright! When she's not practicing her coding, she loves to read, travel, try new recipes, and listen to music. Adventure Spark is her capstone project. Find her on [LinkedIn](https://www.linkedin.com/in/rayna-mecham/) and on [Github](https://github.com/raynamecham).
