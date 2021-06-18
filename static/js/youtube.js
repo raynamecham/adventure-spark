@@ -17,7 +17,7 @@ function getVideo(locationName, locationId) {
                 $.get({
                     url: 'https://www.googleapis.com/youtube/v3/search',
                     data: {
-                        key: 'AIzaSyBOk3yXP1PNSBExCoO6Vh0-o7mTUElZWAY',
+                        key: 'GOOGLEMAPS_YOUTUBE_KEY',
                         q: 'things to do ' + locationName,
                         part: 'snippet',
                         maxResults: 3,
