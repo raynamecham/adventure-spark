@@ -5,7 +5,7 @@ import crud
 import model
 import server
 
-os.system('dropdb adventurespark')
+os.system('dropdb --if-exists adventurespark')
 os.system('createdb adventurespark')
 
 model.connect_to_db(server.app)
