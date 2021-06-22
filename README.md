@@ -41,11 +41,10 @@ Check out the live site at https://adventure-spark.fun
 
 ![](/demo/adventurespark3.gif)
 
-![](/demo/adventurespark4.gif)
 
 ***Logged in users can add, check off, and remove adventures from their list.***
 
-![](/demo/adventurespark5.gif)
+![](/demo/adventurespark4.gif)
 
 
 ### Technologies
