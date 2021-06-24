@@ -149,7 +149,7 @@ def get_youtube_records(location_id):
 
 
 def delete_youtube_records(location_id):
-    """Delete an adventure"""
+    """Delete youtube cache"""
 
     num_rows_deleted = YouTubeCache.query.filter(YouTubeCache.location_id == location_id).delete()
 
